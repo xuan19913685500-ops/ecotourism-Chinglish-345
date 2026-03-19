@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>生态旅游 第3-5章 双语批注版</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1a2744;--navy-dark:#111a33;--navy-mid:#243060;
+  --cream:#f8f4ed;--cream-dark:#f0ead8;
+  --text-main:#2c2416;--text-light:#6b5f4e;
+  --yellow:#f0c040;--yellow-light:#fdf3c8;--yellow-border:#e6ac00;
+  --red:#c94040;--red-light:#fde8e8;--red-border:#b03030;
+  --blue:#2060a0;--blue-light:#e0ecf8;--blue-border:#1850a0;
+  --green:#2a7a45;--green-light:#e2f5ea;--green-border:#1e6035;
+  --purple:#7040a0;--purple-light:#f0e8f8;--purple-border:#5a2d90;
+  --orange:#b05000;--orange-light:#fff3e0;--orange-border:#a04000;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'IBM Plex Sans',sans-serif;background:var(--cream);color:var(--text-main);line-height:1.7;}
+
+.top-nav{background:var(--navy-dark);position:sticky;top:0;z-index:100;box-shadow:0 2px 14px rgba(0,0,0,0.4);}
+.top-nav-inner{max-width:1600px;margin:0 auto;padding:11px 22px;display:flex;align-items:flex-start;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+.nav-title h1{font-family:'Lora',serif;font-size:.98rem;font-weight:700;color:#fff;}
+.nav-title p{font-size:.67rem;color:rgba(255,255,255,.5);margin-top:2px;}
+.legend{display:flex;flex-wrap:wrap;gap:5px;align-items:center;}
+.legend-label{font-size:.6rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.08em;margin-right:2px;}
+.li{display:flex;align-items:center;gap:4px;font-size:.66rem;color:rgba(255,255,255,.8);white-space:nowrap;}
+.ld{width:8px;height:8px;border-radius:2px;flex-shrink:0;}
+.ld-y{background:var(--yellow)}.ld-r{background:var(--red)}.ld-b{background:var(--blue)}
+.ld-g{background:var(--green)}.ld-p{background:var(--purple)}.ld-o{background:var(--orange)}
+
+.ch-nav{background:var(--navy-mid);position:sticky;top:58px;z-index:99;overflow-x:auto;}
+.ch-nav-inner{max-width:1600px;margin:0 auto;display:flex;}
+.ch-nav a{display:inline-block;padding:8px 13px;color:rgba(255,255,255,.6);text-decoration:none;font-size:.69rem;font-weight:500;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s;}
+.ch-nav a:hover{color:#fff;border-bottom-color:var(--yellow);background:rgba(255,255,255,.05);}
+
+.main{max-width:1600px;margin:0 auto;padding:0 18px 60px;}
+.ch-section{margin:44px 0;scroll-margin-top:120px;}
+.ch-header{background:var(--navy);color:#fff;padding:13px 22px;border-radius:6px 6px 0 0;display:flex;justify-content:space-between;align-items:center;gap:10px;}
+.ch-header h2{font-family:'Lora',serif;font-size:1.02rem;font-weight:700;}
+.ch-header .en{font-size:.7rem;color:rgba(255,255,255,.5);font-style:italic;margin-top:2px;}
+.ch-label{background:var(--yellow);color:var(--navy);font-size:.6rem;font-weight:700;padding:2px 8px;border-radius:10px;text-transform:uppercase;letter-spacing:.07em;white-space:nowrap;}
+
+.sub-section{scroll-margin-top:120px;}
+.sub-header{background:var(--cream-dark);border-left:4px solid var(--navy-mid);padding:8px 16px;}
+.sub-header h3{font-family:'Lora',serif;font-size:.88rem;color:var(--navy);font-weight:700;}
+.sub-header .en{font-size:.66rem;color:var(--text-light);font-style:italic;margin-top:1px;}
+
+.page-block{display:grid;grid-template-columns:1fr 340px;border:1px solid rgba(0,0,0,.1);border-top:none;background:#fff;}
+.page-block.first{border-top:1px solid rgba(0,0,0,.1);}
+.col-l{padding:20px 24px;border-right:1px solid rgba(0,0,0,.07);}
+.col-r{padding:13px 15px;background:#f9f7f3;overflow-y:auto;}
+
+.page-num{display:inline-block;background:var(--navy);color:#fff;font-size:.58rem;font-weight:700;padding:1px 8px;border-radius:3px;margin-bottom:10px;letter-spacing:.05em;}
+
+.en-text{font-family:'Lora',serif;font-size:.9rem;line-height:1.9;color:#2c2416;}
+.en-text p{margin-bottom:.95em;}
+.en-text p:last-child{margin-bottom:0;}
+
+/* highlights */
+.hy{background:var(--yellow-light);border-bottom:2px solid var(--yellow-border);padding:0 2px;border-radius:2px;}
+.hr{background:var(--red-light);border-bottom:2px solid var(--red-border);padding:0 2px;border-radius:2px;}
+.hb{background:var(--blue-light);border-bottom:2px solid var(--blue-border);padding:0 2px;border-radius:2px;}
+.hg{background:var(--green-light);border-bottom:2px solid var(--green-border);padding:0 2px;border-radius:2px;}
+.hp{background:var(--purple-light);border-bottom:2px solid var(--purple-border);padding:0 2px;border-radius:2px;}
+.ho{background:var(--orange-light);border-bottom:2px solid var(--orange-border);padding:0 2px;border-radius:2px;}
+
+/* translation strip */
+.trans-strip{background:rgba(26,39,68,.04);border-left:3px solid rgba(36,48,96,.3);padding:9px 12px;margin:8px 0;border-radius:0 4px 4px 0;}
+.tl{font-size:.73rem;line-height:1.65;margin-bottom:4px;display:flex;gap:6px;}
+.tl:last-child{margin-bottom:0;}
+.tl .ten{color:var(--text-light);font-style:italic;font-family:'Lora',serif;flex:none;max-width:42%;}
+.tl .tcn{color:var(--text-main);}
+
+/* anno cards */
+.anno-card{background:#fff;border-radius:5px;border:1px solid rgba(0,0,0,.08);overflow:hidden;margin-bottom:10px;box-shadow:0 1px 3px rgba(0,0,0,.05);}
+.anno-card:last-child{margin-bottom:0;}
+.ac-head{display:flex;align-items:center;gap:5px;padding:6px 10px;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;border-bottom:1px solid rgba(0,0,0,.06);}
+.ac-body{padding:8px 10px;font-size:.73rem;line-height:1.62;color:var(--text-main);}
+.lb{font-weight:600;color:var(--navy);margin-right:3px;}
+.ac-s{margin-bottom:6px;padding-bottom:6px;border-bottom:1px dashed rgba(0,0,0,.07);}
+.ac-s:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
+.ay .ac-head{background:var(--yellow-light);color:#7a5800;border-left:3px solid var(--yellow-border);}
+.ar .ac-head{background:var(--red-light);color:var(--red-border);border-left:3px solid var(--red-border);}
+.ab .ac-head{background:var(--blue-light);color:var(--blue-border);border-left:3px solid var(--blue-border);}
+.ag .ac-head{background:var(--green-light);color:var(--green-border);border-left:3px solid var(--green-border);}
+.ap .ac-head{background:var(--purple-light);color:var(--purple-border);border-left:3px solid var(--purple-border);}
+.ao .ac-head{background:var(--orange-light);color:var(--orange-border);border-left:3px solid var(--orange-border);}
+
+/* vocab */
+.vbox{background:var(--blue-light);border:1px solid rgba(32,96,160,.2);border-radius:4px;padding:6px 9px;margin-bottom:7px;font-size:.7rem;}
+.vbox .ew{font-weight:700;color:var(--blue);font-family:'IBM Plex Sans',sans-serif;}
+.vbox .cw{font-weight:600;color:var(--text-main);}
+.vbox .cd{color:var(--text-light);font-size:.65rem;margin-top:1px;line-height:1.4;}
+
+.qb{margin:.85em 0;padding:9px 13px;border-left:3px solid var(--navy-mid);background:var(--cream-dark);font-size:.86rem;border-radius:0 3px 3px 0;line-height:1.72;}
+
+/* arg map */
+.arg-map{background:var(--navy-dark);color:#fff;padding:34px;margin:44px 0;border-radius:8px;scroll-margin-top:120px;}
+.arg-map h2{font-family:'Lora',serif;font-size:1.2rem;color:var(--yellow);margin-bottom:3px;}
+.arg-map .sub{color:rgba(255,255,255,.4);font-size:.7rem;margin-bottom:24px;}
+.arg-chain{display:flex;margin-bottom:22px;flex-wrap:wrap;}
+.arg-node{flex:1;min-width:110px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:11px 10px;position:relative;text-align:center;}
+.arg-node:not(:last-child)::after{content:'→';position:absolute;right:-10px;top:50%;transform:translateY(-50%);color:var(--yellow);z-index:1;}
+.arg-node .nl{font-size:.59rem;text-transform:uppercase;letter-spacing:.08em;color:var(--yellow);margin-bottom:4px;font-weight:600;}
+.arg-node .nc{font-size:.75rem;color:#fff;line-height:1.4;}
+.arg-meta{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;}
+.ami{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:11px;border-radius:4px;}
+.ami .aml{font-size:.6rem;text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px;font-weight:600;}
+.am-core .aml{color:var(--yellow)}.am-str .aml{color:#66cc88}.am-wk .aml{color:#ff8888}
+.ami .amt{font-size:.75rem;color:rgba(255,255,255,.82);line-height:1.5;}
+
+@media(max-width:860px){
+  .page-block{grid-template-columns:1fr;}
+  .col-l{border-right:none;border-bottom:1px solid rgba(0,0,0,.07);}
+  .arg-chain{flex-direction:column;}
+  .arg-node:not(:last-child)::after{content:'↓';right:50%;bottom:-10px;top:auto;transform:translateX(50%);}
+  .arg-meta{grid-template-columns:1fr;}
+  .legend{display:none;}
+  .tl{flex-direction:column;gap:2px;}
+  .tl .ten{max-width:100%;}
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+<div class="top-nav-inner">
+  <div class="nav-title">
+    <h1>《生态旅游》第3-5章 双语批注版</h1>
+    <p>Ecotourism: Impacts, Potentials and Possibilities, 2nd Ed. ｜ 含逐句翻译 · 疑难词汇标注（橙色虚线）· 五维论证批注</p>
+  </div>
+  <div class="legend">
+    <span class="legend-label">图例</span>
+    <span class="li"><span class="ld ld-y"></span>核心论点</span>
+    <span class="li"><span class="ld ld-r"></span>关键概念</span>
+    <span class="li"><span class="ld ld-b"></span>实证数据</span>
+    <span class="li"><span class="ld ld-g"></span>让步/反驳</span>
+    <span class="li"><span class="ld ld-p"></span>方法论</span>
+    <span class="li"><span class="ld ld-o"></span>疑难词汇</span>
+  </div>
+</div>
+</nav>
+
+<nav class="ch-nav">
+<div class="ch-nav-inner">
+  <a href="#ch3">第三章</a>
+  <a href="#ch3-leak">漏损效应</a>
+  <a href="#ch3-sustain">可持续旅游发展</a>
+  <a href="#ch3-policy">规划与政策框架</a>
+  <a href="#ch3-govt">政府主导规划</a>
+  <a href="#ch3-industry">行业主导规划</a>
+  <a href="#ch3-coop">合作模式</a>
+  <a href="#ch3-best">最佳实践</a>
+  <a href="#ch4">第四章</a>
+  <a href="#ch4-pa">旅游与保护区</a>
+  <a href="#ch4-cap">资本现实主义</a>
+  <a href="#ch4-mgmt">可持续管理</a>
+  <a href="#ch4-cc">承载容量</a>
+  <a href="#ch4-lac">LAC系统</a>
+  <a href="#ch4-vamp">访客管理</a>
+  <a href="#ch5">第五章</a>
+  <a href="#ch5-def">解说的定义</a>
+  <a href="#ch5-change">态度与行为</a>
+  <a href="#ch5-tech">解说技术</a>
+  <a href="#ch5-benefits">解说效益</a>
+  <a href="#arg-map">论证总览</a>
+</div>
+</nav>
+
+<div class="main">
+
+<!-- ============================================================ -->
+<!-- CHAPTER 3 -->
+<!-- ============================================================ -->
+<section class="ch-section" id="ch3">
+<div class="ch-header">
+  <div><h2>第三章：旅游发展——政府、行业、政策与规划</h2>
+  <div class="en">Chapter 3: Tourism Development: Government, Industry, Policy and Planning</div></div>
+  <span class="ch-label">政策分析</span>
+</div>
+
+<!-- p.33 opening -->
+<div class="sub-section" id="ch3-leak">
+<div class="sub-header">
+  <h3>一、旅游业的经济承诺与漏损困境（第33-34页）</h3>
+  <div class="en">Tourism's economic promise vs. the leakage problem — pp.33-34</div>
+</div>
+<div class="page-block first">
+<div class="col-l">
+<div class="page-num">原文 p.33</div>
+<div class="en-text">
+<p><span class="hy">Ecotourism has become a central platform in many countries' development strategies.</span> It is particularly attractive for governments in its potential in providing an alternative to other forms of economic development: through employment generation, for its ability to generate foreign exchange, and its ability to generate sustainable regional growth (Weaver, 1998). Chok et al. (2007) state that <span class="hb">forecasts of high-tourism growth in developing nations, where widespread poverty exists, have led to considerable interest in tourism as a tool for poverty alleviation.</span></p>
+<p><span class="hg">However, in many cases tourism has not lived up to these high expectations.</span> Although tourism is highly regarded in its ability to generate significant levels of revenue in the form of <span class="hr">Gross Domestic Product (GDP)</span> — in many cases tourism's potential in generating foreign exchange has surpassed that of traditional commodity exports — thus allowing for <span class="ho">flow-on benefits</span> in the form of local infrastructure such as roads and electricity. Yet, these benefits are often <span class="ho">circumscribed</span> by the significant impacts on local communities, such as increased pollution and rising local prices and the export of profits from tourism out of the community itself.</p>
+<p>Many local communities and economies where tourism development takes place lack the infrastructure and necessary skills required in establishing tourism operations — chief of which is capital — along with the range of goods and services desired by tourists. As a result <span class="hr">leakages</span> are usually high. <span class="hy">Leakages are the flows of money out of a country or specific area as a result of the necessity to import certain skills, infrastructure, technologies and commodities along with the flow of revenue in the form of profits taken out of a locale by operators</span> (e.g. Hjerpe and Kim, 2007; Lindberg, 2000; Mazibuko, 2007). This is significant for tourism development for in many cases the necessary infrastructure required for tourism is provided by foreign owned corporations, particularly airlines, hotels, car rental agencies and package tours.</p>
+</div>
+<div class="trans-strip">
+  <div class="tl"><span class="ten">Ecotourism has become a central platform in many countries' development strategies.</span><span class="tcn">生态旅游已成为许多国家发展战略的核心平台。</span></div>
+  <div class="tl"><span class="ten">It is particularly attractive for governments in its potential in providing an alternative...</span><span class="tcn">它对政府尤具吸引力，因其有潜力提供传统经济发展方式的替代路径：通过创造就业、创汇以及推动地区可持续增长。</span></div>
+  <div class="tl"><span class="ten">forecasts of high-tourism growth in developing nations...have led to considerable interest in tourism as a tool for poverty alleviation.</span><span class="tcn">对贫困普遍存在的发展中国家旅游业高增长的预测，引发了将旅游业作为扶贫工具的广泛兴趣。</span></div>
+  <div class="tl"><span class="ten">However, in many cases tourism has not lived up to these high expectations.</span><span class="tcn">然而，许多情况下旅游业并未达到这些高期望。</span></div>
+  <div class="tl"><span class="ten">Leakages are the flows of money out of a country or specific area as a result of the necessity to import certain skills...</span><span class="tcn">漏损是指因必须进口特定技能、基础设施、技术和商品，以及运营商将利润转移出当地，而造成的资金外流。</span></div>
+</div>
+</div>
+<div class="col-r">
+<div class="anno-card ay">
+<div class="ac-head">💡 核心论点 Thesis</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">段落功能：</span>提出第三章的核心张力——旅游业"承诺"与"现实"之间的落差。先建立旅游业的正面形象（扶贫工具），再用"however"转折揭示其结构性问题（漏损）。</div>
+<div class="ac-s"><span class="lb">论证结构：</span>许诺→期望→反驳→原因分析。典型的"问题导入"结构，为后文政策讨论的必要性奠基。</div>
+</div>
+</div>
+<div class="anno-card ag">
+<div class="ac-head">🔄 让步/反驳 Concession</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">让步处理：</span>承认旅游能创造GDP、外汇收益，但紧接指出"漏损"使这些收益流失到国外，本地社区所得甚少。这一让步-反驳结构是本章论证的骨干。</div>
+</div>
+</div>
+<div class="vbox"><div><span class="ew">flow-on benefits</span> <span class="cw">连带效益/溢出效益</span></div><div class="cd">某项投资或支出带动的间接经济效益，如旅游收入→修路→基础设施改善。</div></div>
+<div class="vbox"><div><span class="ew">circumscribed</span> <span class="cw">被限制/被削弱</span></div><div class="cd">circumscribe = 在…周围划线，引申为"限制范围"。此处指利益被各种负面影响所削弱、限制。</div></div>
+<div class="vbox"><div><span class="ew">leakages</span> <span class="cw">漏损（资金外流）</span></div><div class="cd">旅游经济中的核心概念：旅游收入不能留在目的地社区，而是流向外资企业或进口商品，是生态旅游批评大众旅游的核心论据之一。</div></div>
+<div class="vbox"><div><span class="ew">poverty alleviation</span> <span class="cw">扶贫/减贫</span></div><div class="cd">减少贫困的政策目标。在旅游发展语境中，指通过旅游收益改善贫困地区居民生活水平。</div></div>
+</div>
+</div><!-- end page-block -->
+</div>
+
+<!-- p.34 multiplier + policy questions -->
+<div class="page-block">
+<div class="col-l">
+<div class="page-num">原文 p.34</div>
+<div class="en-text">
+<p>In many cases leakages have been estimated at up to <span class="hb">80–90% in developing countries</span> that do not have a significant share of the necessary tourism services such as airlines, hotels and transportation companies (Mathieson and Wall, 1982).</p>
+<p>Tourism expenditure is considered to have significant <span class="ho">flow-on effects</span> throughout all levels and sectors of a local economy. This is the <span class="hr">'multiplier' effect</span> whereby initial expenditure of tourist dollars is calculated to initiate expenditure on local goods and services. That is, for every dollar spent an additional amount of dollar is further spent throughout the economy.</p>
+<p><span class="hg">Despite the multiplier effect, however, in many cases the negative economic, environmental and social effects of tourism build over time and are often not felt directly and are only experienced after the initial positive economic impacts.</span> These problems are further <span class="ho">exacerbated</span> through the political <span class="ho">imperatives</span> to realize the short-term gains of tourism which often offset government intervention in planning or managing tourism. The result is that the immediate economic benefits are valued highly and accrue to national accounts while the often significant social and environmental costs have to be borne by local communities.</p>
+<p>Similarly, tourism is often promoted by government or industry without an overall strategy, without adequate attention to <span class="ho">legislative frameworks</span>, without consultation or inclusion of local communities and without effective protected area management plans. This raises significant policy questions for government.</p>
+<p><span class="hy">Against these effects we shall discuss ecotourism's potential to generate significant benefits to local communities as an alternative form of development, through employment, increased revenues for infrastructure and for community projects. Importantly, if the potential for these benefits is to be realized they need to avoid compromising conservation or sustainability objectives.</span></p>
+</div>
+<div class="trans-strip">
+  <div class="tl"><span class="ten">In many cases leakages have been estimated at up to 80–90% in developing countries...</span><span class="tcn">在许多情况下，没有足够旅游服务份额的发展中国家，其漏损率估计高达80%-90%。</span></div>
+  <div class="tl"><span class="ten">This is the 'multiplier' effect whereby initial expenditure of tourist dollars is calculated to initiate expenditure on local goods and services.</span><span class="tcn">这就是"乘数效应"——游客最初的消费被计算为能带动当地商品和服务消费的连锁效应，即每花出一美元，整个经济中会额外产生更多支出。</span></div>
+  <div class="tl"><span class="ten">Despite the multiplier effect...the negative economic, environmental and social effects of tourism build over time...</span><span class="tcn">尽管存在乘数效应，许多情况下旅游业的负面经济、环境和社会影响会随时间积累，往往不是直接显现，而是在初期正面经济影响之后才被感受到。</span></div>
+  <div class="tl"><span class="ten">...social and environmental costs have to be borne by local communities.</span><span class="tcn">重大的社会与环境代价往往由当地社区承担。</span></div>
+  <div class="tl"><span class="ten">tourism is often promoted...without consultation or inclusion of local communities...</span><span class="tcn">旅游业常常在没有整体战略、没有充分关注立法框架、没有咨询或纳入当地社区、没有有效保护区管理计划的情况下被推广。</span></div>
+</div>
+</div>
+<div class="col-r">
+<div class="anno-card ab">
+<div class="ac-head">📊 实证数据 Evidence</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">80-90%漏损率：</span>这是本章最关键的数据。它说明在最坏情况下，一个发展中国家为了每获得10美元旅游收入，可能有8-9美元流向外资企业。这彻底颠覆了"旅游=发展"的简单等式。</div>
+</div>
+</div>
+<div class="anno-card ag">
+<div class="ac-head">🔄 让步/反驳 Concession</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">乘数效应的让步：</span>作者先承认"乘数效应"（每1美元带动更多消费），但立即用"despite...however"反驳：负面影响会随时间积累，政治上倾向短期利益的偏向往往阻碍必要的规划干预。</div>
+</div>
+</div>
+<div class="vbox"><div><span class="ew">multiplier effect</span> <span class="cw">乘数效应</span></div><div class="cd">经济学概念：初始支出通过在经济中循环流转，产生数倍于原始金额的总体经济影响。旅游业常用此论据证明其经济价值。</div></div>
+<div class="vbox"><div><span class="ew">exacerbated</span> <span class="cw">使恶化/加剧</span></div><div class="cd">exacerbate = 使（已存在的问题）更严重。四级词汇重点：ex-（出）+ acerbus（苦/严厉），字面意思是"使更苦"。</div></div>
+<div class="vbox"><div><span class="ew">imperatives</span> <span class="cw">紧迫要求/命令式需求</span></div><div class="cd">政治语境中指不可回避的优先考量。"political imperatives"=政治上不得不做的事，如短期内实现经济增长数字。</div></div>
+<div class="vbox"><div><span class="ew">legislative frameworks</span> <span class="cw">立法框架</span></div><div class="cd">法律法规的整体体系结构，包括规划法、环境保护法、土地利用法等。旅游业缺乏这一框架会导致无序开发。</div></div>
+</div>
+</div>
+</div>
+
+<!-- p.35-37 Sustainable Tourism Development -->
+<div class="sub-section" id="ch3-sustain">
+<div class="sub-header">
+  <h3>二、可持续旅游发展：理论与实践的落差（第35-37页）</h3>
+  <div class="en">Sustainable Tourism Development — Gap between theory and practice, pp.35-37</div>
+</div>
+</div>
+<div class="page-block first">
+<div class="col-l">
+<div class="page-num">原文 p.35-36</div>
+<div class="en-text">
+<p>During the 1970s and 1980s, <span class="ho">integrated rural development projects</span> were used to raise rural living standards in developing countries, and focused primarily on irrigation, roads and social services. However, the World Bank (1992:86) found that the results were often disappointing, with low success rates because of over-emphasis in appraisals on outcomes, a tendency to select large and complex projects and overly optimistic projections of project outcomes. The development of ecotourism and its infrastructure in providing for tourism experiences in the new millennium may suffer the same fate (Harrison, 2001).</p>
+<p>In order to ensure that tourism does not exceed its <span class="ho">sustainable base</span>, an understanding of the mechanisms that lead to the provision of infrastructure for development and the policy and institutional <span class="ho">prerequisites</span> for planning and managing ecotourism is fundamental.</p>
+<p><span class="hy">Sustainable tourism is a tourism that produces economic advantages, in addition to maintaining environmental diversity and quality thus 'combining conservation with economic development' (Wild, 1994:12).</span> A primary means of maintaining sustainability is by the limiting of tourist numbers and therefore the possibility for environmental degradation (Inskeep, 1991). In this way <span class="hy">ecotourism is a supply-led approach (see Chapter 8) which involves determining visitor numbers based on the environment's capacity (its ability to support) rather than by the demand for it.</span></p>
+<p><span class="hg">However, what often sounds fine in theory is often not always the case in practice.</span> 'Over the last quarter century, both the supply of and demand for ecotourism have grown significantly' (Sharpley, 2006: 7) and <span class="hb">most of that growth has been unsustainable</span> (Isaacs, 2000; Kamauro, 1996; Steele, 1995).</p>
+<p>Unsustainable ecotourism is the result of <span class="ho">inappropriate developments</span> taking place in sensitive locations. The problem as Buckley and King (2003) see it is that increasing tourism (including ecotourism) will damage parks in ways that are not predicted or detected until they become <span class="ho">irreversible</span>. The environmental effects caused by <span class="hb">overcrowding, overdevelopment, unregulated recreation, pollution, wildlife disturbances and vehicle use are more serious for ecotourism than mass tourism</span> (McNeely cited in Hvenegaard, 1994). This is related to the fact that ecotourism is more dependent on intact natural environments and is concentrated in ecologically sensitive areas.</p>
+<p><span class="hy">The negative effects of ecotourism are in large part due to the fact that visitation often precedes effective management and planning</span> (e.g. Sofield, 2003). Thus in reality there is a need for suitable planning strategies to be formulated and implemented to ensure that the future expansion of ecotourism takes place in accordance with the principles of sustainable development.</p>
+</div>
+<div class="trans-strip">
+  <div class="tl"><span class="ten">Sustainable tourism is a tourism that produces economic advantages, in addition to maintaining environmental diversity and quality...</span><span class="tcn">可持续旅游是一种在维持环境多样性和质量的同时创造经济效益的旅游，从而"将保护与经济发展相结合"。</span></div>
+  <div class="tl"><span class="ten">ecotourism is a supply-led approach...which involves determining visitor numbers based on the environment's capacity rather than by the demand for it.</span><span class="tcn">生态旅游是一种供给主导的模式，即根据环境的承载能力（而非市场需求）来确定游客数量。</span></div>
+  <div class="tl"><span class="ten">what often sounds fine in theory is often not always the case in practice.</span><span class="tcn">然而，理论上听起来很好的方案，实践中并不总是如此。</span></div>
+  <div class="tl"><span class="ten">The negative effects of ecotourism are in large part due to the fact that visitation often precedes effective management and planning.</span><span class="tcn">生态旅游负面影响的主要原因在于，游客到来往往先于有效管理和规划的建立。</span></div>
+</div>
+</div>
+<div class="col-r">
+<div class="anno-card ay">
+<div class="ac-head">💡 核心论点 Thesis</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">关键论点：</span>"游客先于管理"（visitation precedes management）是本章最重要的诊断。它解释了为什么即使是善意的生态旅游也会造成破坏：没有预先的规划框架，再好的理念也无法落地。</div>
+<div class="ac-s"><span class="lb">供给主导再强调：</span>生态旅游按环境承载力控制游客数量，而非按市场需求无限扩张——这一原则在实践中普遍被违反，这也是作者在整个章节论证政策干预必要性的基础。</div>
+</div>
+</div>
+<div class="anno-card ag">
+<div class="ac-head">🔄 让步/反驳 Concession</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">理论-实践落差：</span>此处是全章最重要的让步结构——"理论上生态旅游可持续，但实践中大部分增长是不可持续的"。这并非否定生态旅游，而是为"需要政策框架"的论点服务。</div>
+</div>
+</div>
+<div class="vbox"><div><span class="ew">integrated rural development projects</span> <span class="cw">综合农村发展项目</span></div><div class="cd">1970-80年代流行的发展模式，将农业、道路、水利、社会服务整合推进。世界银行发现其效果令人失望，为作者警告"生态旅游可能重蹈覆辙"提供历史依据。</div></div>
+<div class="vbox"><div><span class="ew">prerequisites</span> <span class="cw">先决条件/必要前提</span></div><div class="cd">pre-（在…之前）+ requisite（必需的）。指在某事成功之前必须具备的条件，如政策框架、机构能力等。</div></div>
+<div class="vbox"><div><span class="ew">irreversible</span> <span class="cw">不可逆的</span></div><div class="cd">irreversible damage = 不可挽回的损害。在生态语境中指超过生态系统恢复能力的破坏，如物种灭绝、土壤侵蚀等。</div></div>
+<div class="vbox"><div><span class="ew">sustainable base</span> <span class="cw">可持续基础</span></div><div class="cd">维持旅游业长期发展所依赖的自然、社会和文化资源的阈值底线。超越这一基础即为不可持续。</div></div>
+</div>
+</div>
+
+<!-- Planning and Policy -->
+<div class="sub-section" id="ch3-policy">
+<div class="sub-header">
+  <h3>三、规划与政策框架（第38-41页）</h3>
+  <div class="en">Planning and Policy Frameworks — Who is Involved and How? pp.38-41</div>
+</div>
+</div>
+<div class="page-block first">
+<div class="col-l">
+<div class="page-num">原文 p.38-39</div>
+<div class="en-text">
+<p><span class="hy">Effective planning greatly enhances the sustainable development credentials of ecotourism.</span> Central to the goals of environmental conservation and resource sustainability is the protection and maintenance of environmental quality (Fennell, 2002; Krüger, 2005). Achieving this primary goal requires planning which is grounded in <span class="hb">'environmental protection and enhancement yet fosters the realization of tourism potential' (Dowling, 1991: 128).</span></p>
+<p>Planning involves <span class="ho">anticipating and regulating change</span> to encourage appropriate development so as to increase the social, economic and environmental benefits of the actual process (Murphy, 1985). Ecotourism can become an important function in protected areas but can cause degradation of natural-landscape values. For this reason, it is necessary to plan and manage carefully tourist movement to achieve the right balance between the use and conservation.</p>
+<p>Sustainability of ecotourism practices is therefore possible if planning balances the demands of development with the supply of the environment in an attempt to manage potential benefits now and in the future (Fennell and Dowling, 2003).</p>
+</div>
+<div class="sub-section" id="ch3-govt"></div>
+<div class="en-text" style="margin-top:14px;">
+<p><strong>Government-led planning and policy initiatives</strong></p>
+<p><span class="hy">Sustainable tourism, like its parental concept sustainable development, is inherently political</span> (Bramwell, 2005). It is widely recognized that <span class="hy">governments have the greatest potential to shape tourism</span> in dictating how it is promoted, planned, managed and regulated. They are the only body that can provide long-term planning and management as <span class="ho">legislative and juridical</span> protection of nature reserves for the benefit of future generations (e.g. Buckley, 2004).</p>
+<p>Government policy, through its ability to enforce necessary environmental regulations, sets broad industry standards and therefore can assist in minimizing negative impacts, and hence has a major role to play in facilitating sustainable ecotourism practices. The significance of government policy and planning in <span class="ho">accommodating</span> sustainable ecotourism lies in its ability to effectively administer appropriate guidelines and consistent standards, taking into account possible effects.</p>
+<p>The main tools of government policy aimed at tourism-related environmental problems are:</p>
+<div class="qb">
+  — <strong>legislation</strong>（立法）：制定法律规定<br>
+  — <strong>regulation</strong> – including revenue collection and redistribution（监管，含税收征收与再分配）<br>
+  — <strong>control</strong>（管控）<br>
+  — <strong>the coordination of policies and programs</strong>（政策与项目协调）<br>
+  — <strong>infrastructure and incentives</strong>（基础设施与激励措施）<br>
+  — <strong>planning and promotion between national and local level ecotourism ventures</strong>（国家与地方层面生态旅游项目的规划与推广）
+</div>
+<p><span class="hg">However, it has taken additional international funding and consultants to implement the strategy, highlighting the fact that governments alone are not always capable of delivering what they have planned.</span></p>
+<p><span class="hg">There is also the issue of local involvement to consider as well. For example, the Solomon Island government instituted a National Sustainable Tourism Policy in 1990; however, it had little effect at the local level because villagers perceived a lack of participation and control</span> (Sofield, 2003: 191–224).</p>
+</div>
+<div class="trans-strip">
+  <div class="tl"><span class="ten">Effective planning greatly enhances the sustainable development credentials of ecotourism.</span><span class="tcn">有效的规划极大地增强了生态旅游的可持续发展信誉。</span></div>
+  <div class="tl"><span class="ten">Sustainable tourism, like its parental concept sustainable development, is inherently political.</span><span class="tcn">可持续旅游与其母概念可持续发展一样，本质上是政治性的。</span></div>
+  <div class="tl"><span class="ten">governments have the greatest potential to shape tourism in dictating how it is promoted, planned, managed and regulated.</span><span class="tcn">政府在决定旅游业如何推广、规划、管理和监管方面具有最大的塑造潜力。</span></div>
+  <div class="tl"><span class="ten">the Solomon Island government instituted a National Sustainable Tourism Policy...it had little effect at the local level because villagers perceived a lack of participation and control.</span><span class="tcn">所罗门群岛政府于1990年建立了国家可持续旅游政策，然而在地方层面收效甚微，因为村民们感到缺乏参与权和控制权。</span></div>
+</div>
+</div>
+<div class="col-r">
+<div class="anno-card ay">
+<div class="ac-head">💡 核心论点 Thesis</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">政府角色论点：</span>政府是唯一能够提供跨代、跨地区、强制执行的长期规划和管理框架的主体。这是本节的核心主张，也是作者反对纯市场自我调节的依据。</div>
+<div class="ac-s"><span class="lb">六大政策工具：</span>立法、监管、管控、协调、基础设施激励、国地规划推广——这是考试中常考的分类框架，请记住。</div>
+</div>
+</div>
+<div class="anno-card ag">
+<div class="ac-head">🔄 让步/反驳 Concession</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">政府局限性：</span>所罗门群岛案例和汤加案例均说明：政府政策如果不能真正纳入本地社区参与，即使设计再完善也难以落地。这为后文"合作模式"的必要性埋下伏笔。</div>
+</div>
+</div>
+<div class="vbox"><div><span class="ew">legislative and juridical</span> <span class="cw">立法的与司法的</span></div><div class="cd">legislative = 立法方面的（制定法律）；juridical = 法律/司法方面的（执行法律）。两词合用强调政府保护自然保护区的全面法律权力。</div></div>
+<div class="vbox"><div><span class="ew">accommodating</span> <span class="cw">容纳/为…创造条件</span></div><div class="cd">此处非"住宿"，而是"为…提供必要条件/调整以适应"。government policy in accommodating sustainable ecotourism = 政策为可持续生态旅游创造实现条件。</div></div>
+<div class="vbox"><div><span class="ew">credentials</span> <span class="cw">资质/可信度/信誉</span></div><div class="cd">credentials = 证明能力或真实性的依据（如证书、资历）。sustainable development credentials = 在可持续发展方面的合法性与可信度。</div></div>
+</div>
+</div>
+
+<!-- Integrated policy p.42-45 -->
+<div class="page-block">
+<div class="col-l">
+<div class="page-num">原文 p.42-45</div>
+<div class="en-text">
+<p><strong>Integrated policy and planning</strong></p>
+<p><span class="hy">The holistic ambitions of sustainable development and the multidisciplinary nature of tourism entail that only governments and public authorities can coordinate efforts in sustainable tourism policy</span> at both the national and local levels (Bramwell, 2005). Sustainable tourism, viewed as contributing to overall sustainable development, requires coordination between various policy-making levels and agencies to overcome and accommodate sectoral considerations that only government bodies, at all levels of policy-making can provide.</p>
+<p>The aim of planning for ecotourism is often to identify major issues that are likely to affect the development and management of ecotourism, as well as to develop policies and programs to assist in making the industry more viable and sustainable. An ecotourism plan should ideally encompass the following steps:</p>
+<div class="qb">
+  ① <strong>study preparation</strong>（研究准备）<br>
+  ② <strong>determination of objectives</strong>（目标确定）<br>
+  ③ <strong>survey</strong>（调查）<br>
+  ④ <strong>analysis and synthesis</strong>（分析与综合）<br>
+  ⑤ <strong>policy and plan formulation</strong>（政策与计划制定）<br>
+  ⑥ <strong>recommendations</strong>（建议提出）<br>
+  ⑦ <strong>implementation and monitoring</strong>（实施与监测）
+</div>
+<p>With a consistent and combined effort that seeks community support, governments have the potential to establish effective regulation which incorporates the principles of sustainability: 'its successful implementation requires integrated policy, planning and social learning processes: its political viability depends on the full support of the people it affects through their governments, their social institutions and their private activities' (Gunn, 1994: 244).</p>
+<p><span class="hy">The coordination of government planning with private sector and non-government organizations is also fundamental, as is the establishment of links with tourism operators and local communities to facilitate sustainable practices</span> (Wild, 1994). For sustainability to be achieved at all levels of government, operators and developers, as well as tourists and local communities, <span class="hy">must each be involved in collaborative partnerships.</span></p>
+</div>
+<div class="trans-strip">
+  <div class="tl"><span class="ten">The holistic ambitions of sustainable development and the multidisciplinary nature of tourism entail that only governments and public authorities can coordinate efforts in sustainable tourism policy...</span><span class="tcn">可持续发展的整体性目标与旅游业的多学科性质，决定了只有政府和公共机构才能在国家和地方两个层面协调可持续旅游政策的努力。</span></div>
+  <div class="tl"><span class="ten">its successful implementation requires integrated policy, planning and social learning processes...</span><span class="tcn">其成功实施需要综合性的政策、规划与社会学习进程；其政治可行性依赖于受影响人群通过其政府、社会机构和私人活动给予的充分支持。</span></div>
+  <div class="tl"><span class="ten">must each be involved in collaborative partnerships.</span><span class="tcn">各方必须共同参与合作伙伴关系。</span></div>
+</div>
+</div>
+<div class="col-r">
+<div class="anno-card ap">
+<div class="ac-head">🔬 方法论 Methodology</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">七步规划流程：</span>作者提供的"研究准备→目标确定→调查→分析综合→政策制定→建议→实施监测"是标准的生态旅游规划方法论，体现了系统性思维，考试中可用于分析案例。</div>
+</div>
+</div>
+<div class="anno-card ay">
+<div class="ac-head">💡 核心论点 Thesis</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">合作伙伴关系论点：</span>政府单独行动不够，需要政府+私营+NGO+本地社区+游客的多方协作。这一"多利益相关方"（multi-stakeholder）框架是现代生态旅游治理的核心原则。</div>
+</div>
+</div>
+<div class="vbox"><div><span class="ew">holistic</span> <span class="cw">整体性的/全面的</span></div><div class="cd">holistic = 将整体视为超过各部分之和的思维方式。与"分部门"或"局部"思维相对，强调系统性和综合性。</div></div>
+<div class="vbox"><div><span class="ew">multidisciplinary</span> <span class="cw">多学科的</span></div><div class="cd">涉及多个学科（如生态学、经济学、社会学、政治学）的综合性研究或政策制定方式。生态旅游研究的本质特征。</div></div>
+<div class="vbox"><div><span class="ew">entail</span> <span class="cw">意味着/需要/必然导致</span></div><div class="cd">entail = 使某事成为必然结果或必要条件。"entail that only governments can..."= 决定了只有政府才能…这是必然推论。</div></div>
+</div>
+</div>
+
+<!-- Industry-led planning p.46-54 -->
+<div class="sub-section" id="ch3-industry">
+<div class="sub-header">
+  <h3>四、行业主导的规划与政策（第46-54页）</h3>
+  <div class="en">Industry-Led Planning and Policy — Codes, Compliance, Accreditation pp.46-54</div>
+</div>
+</div>
+<div class="page-block first">
+<div class="col-l">
+<div class="page-num">原文 p.46-49</div>
+<div class="en-text">
+<p>Planning and policy initiatives in the tourism industry are often seen as preventative methods in striking a balance between self-regulation and external regulation. This issue is of particular importance in managing the relationship between tourism and the environment, due to the fact that a <span class="ho">proactive stance</span> by industry on environmental issues will always be a preferred industry solution rather than reacting to legislative regulations. <span class="hg">However, self-regulation of environmental impacts by industry has not always been successful in other sectors, such as mining and agriculture.</span></p>
+<p>The development of a code of practice for tourists and tour operators is typically one of the first industry initiatives on the path of sustainable development. Today <span class="hb">certification and ecolabelling are among the hottest topics in the tourism industry. Around the world there are some 260 voluntary initiatives, including tourism codes of conduct, labels, awards, benchmarking and 'best practices'. Of these 104 are ecolabelling and certification programs</span> offering logos, seals of approval or awards designed to signify socially and/or environmentally superior tourism practices (Honey, 2007).</p>
+<p>The above example is unfortunately a relatively <span class="ho">isolated case</span>. Most guidelines or codes of practice are ineffective as they lack any enforcement policy, statements of objectives, targets or evaluation procedures (Blangy and Nielsen, 1993). Further, such codes of practice and principles have also been criticized as they are usually <span class="ho">adopted as narrow checklists</span>, thus creating strict frames of reference that do not encourage actions or thoughts beyond those detailed on the lists (Gertsakis, 1995).</p>
+<p><strong>Accreditation</strong></p>
+<p><span class="hr">Accreditation</span> has been proposed as one solution to the provision of security and a quality of experience. It offers the opportunity to improve industry standards generally and the opportunity to provide a degree of quality assurance in a highly competitive market. It may also improve the protection of the natural environment on which ecotourism depends and ensure appropriate practices and more informed decision-making by ecotourists.</p>
+<p><span class="hr">Accreditation involves the formal acknowledgment of adherence to agreed standards</span> (Allcock et al., 1994). Benefits often associated with accreditation include quality assurance to both operators and tourists and the creation of a competitive edge in marketing.</p>
+<p>The world's first National Ecotourism Accreditation scheme was developed and launched by the Ecotourism Association of Australia and the Australian Tourism Operators Network in 1996. The program is based on <span class="ho">ecologically sustainable development principles</span> and gives operators the opportunity to be innovative and continually improve their practices.</p>
+</div>
+<div class="trans-strip">
+  <div class="tl"><span class="ten">a proactive stance by industry on environmental issues will always be a preferred industry solution rather than reacting to legislative regulations.</span><span class="tcn">行业在环境问题上的主动立场，始终是比被动应对立法法规更受欢迎的行业解决方案。</span></div>
+  <div class="tl"><span class="ten">certification and ecolabelling are among the hottest topics in the tourism industry.</span><span class="tcn">认证和生态标签是旅游业中最热门的议题之一。</span></div>
+  <div class="tl"><span class="ten">Most guidelines or codes of practice are ineffective as they lack any enforcement policy...</span><span class="tcn">大多数准则或行为规范都缺乏执行政策、目标陈述、具体指标或评估程序，因此收效甚微。</span></div>
+  <div class="tl"><span class="ten">Accreditation involves the formal acknowledgment of adherence to agreed standards.</span><span class="tcn">认证涉及对遵守既定标准的正式确认。</span></div>
+</div>
+</div>
+<div class="col-r">
+<div class="anno-card ag">
+<div class="ac-head">🔄 让步/反驳 Concession</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">行业自我监管的局限：</span>作者指出行业主导的规范存在根本性弱点——无执行力、窄化为清单、缺乏评估。这是本节的核心反驳，为"需要政府监管+认证制度"的论点服务。</div>
+</div>
+</div>
+<div class="anno-card ar">
+<div class="ac-head">🔑 关键概念 Key Term</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">行业质量连续体（Table 3.1）：</span>从弱到强：行为规范（Codes of Practice）→合规（Compliance）→认证（Accreditation）→质量体系（Quality System）→认证证书（Certification）。认证程度越高，执行力越强，但参与门槛也越高。</div>
+<div class="ac-s"><span class="lb">认证的四大效益：</span>质量保证、营销竞争优势、环境保护、提升游客决策质量。</div>
+</div>
+</div>
+<div class="vbox"><div><span class="ew">proactive stance</span> <span class="cw">主动立场/积极应对</span></div><div class="cd">proactive = 在问题发生之前就采取行动预防（与reactive=事后反应相对）。行业自我监管的理想状态。</div></div>
+<div class="vbox"><div><span class="ew">ecolabelling</span> <span class="cw">生态标签/环保认证标识</span></div><div class="cd">在产品或服务上标注环境友好标志的制度，帮助消费者识别经过认证的可持续产品。旅游中的生态标签包括绿色地球（Green Globe）等。</div></div>
+<div class="vbox"><div><span class="ew">accreditation</span> <span class="cw">认证/资质鉴定</span></div><div class="cd">由权威机构正式承认某组织或个人达到既定标准的过程。比"合规"（compliance）要求更高，通常涉及第三方审核。</div></div>
+<div class="vbox"><div><span class="ew">benchmarking</span> <span class="cw">基准对标</span></div><div class="cd">将自身绩效与行业最佳实践或标准进行比较的管理方法。帮助企业识别改进空间。</div></div>
+</div>
+</div>
+
+<!-- Cooperative p.54-57 -->
+<div class="sub-section" id="ch3-coop">
+<div class="sub-header">
+  <h3>五、合作：政府、行业与社区的共同参与（第54-55页）</h3>
+  <div class="en">Cooperative Government and Industry Initiatives: Community Involvement pp.54-55</div>
+</div>
+</div>
+<div class="page-block first">
+<div class="col-l">
+<div class="page-num">原文 p.54-55</div>
+<div class="en-text">
+<p>Depending on the political and economic system of a country, the ideal solution to the debate over 'self-regulation' versus 'regulation' is a <span class="hr">cooperative approach</span> to tourism planning and policy. A critical ingredient in the success of self-regulation is community involvement, which is a major issue in the sustainable tourism principles literature (Inskeep, 1991; Eber, 1992).</p>
+<p>Sustainable tourism relies heavily then on the stakeholder involvement and efforts must be made to improve the links between nature conservation, local community development and the tourism industry (Ceballos-Lascurain, 1996; Weaver, 2001). Stakeholder involvement needs to consider two main points: (1) who should be considered stakeholders in the tourism planning and development stage, and (2) how should planners and developers involve stakeholders in the development of tourism (Byrd, 2007).</p>
+<p>However, there has been a consistent failure to establish sufficient stakeholder support for sustainable management models — such as the <span class="hr">Visitor Impact Management Model (VIMM)</span> and the <span class="hr">Limits of Acceptable Change (LAC)</span> which we discuss further in the following chapter — largely due to the fact that management organizations responsible for these models simply are not attuned to attracting wider stakeholder involvement. There are three primary impediments to achieving this outcome:</p>
+<div class="qb">
+  — the use of the terms '<strong>impact</strong>' and '<strong>limits</strong>', which the tourism industry has interpreted as being <span class="ho">discouraging</span> to growth and thus business<br>
+  — the conventional <span class="ho">narrow focus</span> on the condition of the physical environment<br>
+  — the lack of <span class="ho">cooperative involvement</span> of the tourism sector in identifying indicators and standards that are acceptable to the industry
+</div>
+</div>
+<div class="trans-strip">
+  <div class="tl"><span class="ten">the ideal solution to the debate over 'self-regulation' versus 'regulation' is a cooperative approach to tourism planning and policy.</span><span class="tcn">就"自我监管"与"外部监管"之争而言，理想的解决方案是采取合作性的旅游规划与政策方式。</span></div>
+  <div class="tl"><span class="ten">there has been a consistent failure to establish sufficient stakeholder support for sustainable management models...</span><span class="tcn">持续存在的问题是，无法为可持续管理模型建立足够的利益相关方支持……主要因为负责这些模型的管理机构根本没有致力于吸引更广泛的利益相关方参与。</span></div>
+</div>
+</div>
+<div class="col-r">
+<div class="anno-card ay">
+<div class="ac-head">💡 核心论点 Thesis</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">合作模式是理想解：</span>自我监管（行业主导）和外部监管（政府主导）各有缺陷，作者认为融合两者的合作方式才是正解。三大障碍（术语、视野、参与度）揭示了实践中的系统性问题。</div>
+</div>
+</div>
+<div class="vbox"><div><span class="ew">stakeholder</span> <span class="cw">利益相关方</span></div><div class="cd">对某一决策有利益关系的所有个人或群体，包括政府、企业、社区居民、游客、NGO等。可持续旅游管理要求将所有利益相关方纳入决策过程。</div></div>
+<div class="vbox"><div><span class="ew">impediments</span> <span class="cw">障碍/阻碍</span></div><div class="cd">impediment = 阻止或减缓进程的因素（如物理障碍或制度障碍）。三大impediments具体揭示了利益相关方参与失败的原因。</div></div>
+<div class="vbox"><div><span class="ew">VIMM / LAC</span> <span class="cw">访客影响管理模型 / 可接受变化限度</span></div><div class="cd">两种保护区访客管理框架（第四章详细讨论）。这里提前提及是为了说明：即使有成熟工具，缺乏利益相关方参与也会导致实施失败。</div></div>
+</div>
+</div>
+
+<!-- Best practice p.56-60 -->
+<div class="sub-section" id="ch3-best">
+<div class="sub-header">
+  <h3>六、运用政策实现最佳实践（第56-60页）</h3>
+  <div class="en">Using Policy to Achieve Best Practice — Zoning pp.56-60</div>
+</div>
+</div>
+<div class="page-block first">
+<div class="col-l">
+<div class="page-num">原文 p.56-60</div>
+<div class="en-text">
+<p>Tourism has the potential to be an 'environmentally friendly' industry. Yet, there are well-documented examples of tourist destinations becoming polluted, degraded and <span class="ho">congested</span> by mass market travel. One way of attempting to deal with such problems of increasing environmental degradation of the natural environment is through the incorporation of <span class="hr">'environmental best practice'</span>. This concept not only plays a role in the ecotourism industry but also in the 'mainstream' tourism industry.</p>
+<p><span class="hy">Best practice involves striving for excellence, keeping in touch with innovations, avoiding waste and focusing on outcomes which are in the community interest</span> (Edwards and Prineas, 1995). It involves managing change and continual improvement and in this way it encompasses all levels of an organization.</p>
+<p>There is an inverse relationship between how environmentally friendly a local nature tourism operation is and how economically powerful it can ever hope to be (Cohen and Richardson, 1995). In this sense <span class="hg">the environmental best practice initiatives of ecotourism are often not adopted within the greater tourism industry as they can be seen to place limits on profitability.</span></p>
+<p><strong>Zoning</strong></p>
+<p><span class="hr">Land use zoning</span> divides sections of land into areas based on their sensitivity and conservation values (Buckley and Pannell, 1990). They also aim to establish systematic recreational use management. <span class="hy">By doing so areas are designated for different purposes in an attempt not only to protect the valued areas but also to balance this with use.</span></p>
+<p><span class="hy">Zoning is an effective means to limit the extent of tourism activities within the sustainable boundaries of the region.</span> In order for zoning to work effectively it is essential to clarify each zone's recreational characteristic and management goal in the area, and develop recreation facilities and manage the area in keeping with these goals.</p>
+<p>The main advantage of zoning is that it is one way in which <span class="hy">conflicting activities can be separated, enabling the identification of the suitability of particular sites/areas for particular uses, and the protection and conservation of selected sites or areas</span> (Simmons and Harris, 1995: 14).</p>
+</div>
+<div class="trans-strip">
+  <div class="tl"><span class="ten">Best practice involves striving for excellence, keeping in touch with innovations, avoiding waste and focusing on outcomes which are in the community interest.</span><span class="tcn">最佳实践涉及追求卓越、紧跟创新、避免浪费，并专注于符合社区利益的成果。</span></div>
+  <div class="tl"><span class="ten">There is an inverse relationship between how environmentally friendly a local nature tourism operation is and how economically powerful it can ever hope to be.</span><span class="tcn">一个本地自然旅游运营项目的环保程度与其可能实现的经济实力之间存在反比关系。</span></div>
+  <div class="tl"><span class="ten">Land use zoning divides sections of land into areas based on their sensitivity and conservation values.</span><span class="tcn">土地利用分区根据土地的敏感性和保护价值将其划分为不同区域。</span></div>
+  <div class="tl"><span class="ten">conflicting activities can be separated, enabling the identification of the suitability of particular sites/areas for particular uses...</span><span class="tcn">相互冲突的活动可以被分隔开，从而能够识别特定地点/区域适合特定用途，并对选定地点或区域进行保护和保育。</span></div>
+</div>
+</div>
+<div class="col-r">
+<div class="anno-card ay">
+<div class="ac-head">💡 核心论点 Thesis</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">最佳实践定义：</span>追求卓越+持续创新+避免浪费+以社区利益为结果导向。注意这是一个内含价值判断的定义，不仅是技术性标准。</div>
+<div class="ac-s"><span class="lb">分区制的逻辑：</span>分区制将不同强度的用途分隔，既保护核心区又允许边缘区适度使用，体现了"兼顾保护与利用"的政策平衡思想。</div>
+</div>
+</div>
+<div class="anno-card ag">
+<div class="ac-head">🔄 让步/反驳 Concession</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">环保与盈利的反比关系：</span>这是本章最坦率的让步——越环保的运营往往越难盈利，这一经济现实使"最佳实践"难以在整个旅游业推广。作者承认这一矛盾，但坚持认为这不构成放弃最佳实践的理由。</div>
+</div>
+</div>
+<div class="vbox"><div><span class="ew">congested</span> <span class="cw">拥挤/过度密集</span></div><div class="cd">congestion = 交通/人流堵塞。旅游语境中指目的地因访客过多导致的环境和体验质量下降。</div></div>
+<div class="vbox"><div><span class="ew">inverse relationship</span> <span class="cw">反比关系</span></div><div class="cd">一个变量增大时另一个变量减小的关系。"越环保越不盈利"是生态旅游面临的核心经济困境。</div></div>
+<div class="vbox"><div><span class="ew">land use zoning</span> <span class="cw">土地利用分区制</span></div><div class="cd">根据土地敏感性和保护价值将其划分为不同功能区域（如核心保护区、缓冲区、旅游利用区）的规划工具。是保护区管理的基本手段。</div></div>
+</div>
+</div>
+</div><!-- end ch3 -->
+
+<!-- ============================================================ -->
+<!-- CHAPTER 4 -->
+<!-- ============================================================ -->
+<section class="ch-section" id="ch4">
+<div class="ch-header">
+  <div><h2>第四章：生态旅游与保护区——可持续性的访客管理</h2>
+  <div class="en">Chapter 4: Ecotourism and Protected Areas: Visitor Management for Sustainability</div></div>
+  <span class="ch-label">保护区管理</span>
+</div>
+
+<!-- Tourism and protected areas -->
+<div class="sub-section" id="ch4-pa">
+<div class="sub-header">
+  <h3>一、旅游业与保护区的根本矛盾（第63-65页）</h3>
+  <div class="en">Tourism and Protected Areas — The fundamental dilemma pp.63-65</div>
+</div>
+</div>
+<div class="page-block first">
+<div class="col-l">
+<div class="page-num">原文 p.63-64</div>
+<div class="en-text">
+<p>Conservation issues are now at the forefront of public awareness. Climate change, the decline of rainforests, loss of endangered species and increasing land degradation have <span class="ho">galvanized</span> public support for conservation. It is no accident that the interest and growth of ecotourism and nature-oriented tourism have coincided with this worldwide concern.</p>
+<p>Ecotourism and nature-oriented tourism often take place in protected and remote regions, areas of exceptional beauty, ecological interest and cultural importance. Today, these areas are established to conserve biodiversity and to halt the large-scale loss of natural ecosystems. In 1962, there were <span class="hb">1000 protected areas covering 3% of the earth's surface</span>, now there are <span class="hb">102,100 covering 18.8 million square kilometers or 11.5% of the Earth's land surface</span> (Bushell and Eagles, 2003). This represents a phenomenal growth in both the public desire and political will to see natural areas protected in perpetuity.</p>
+<p>While the number of protected areas around the world has grown they are also coming under increasing pressure on a range of fronts including:</p>
+<div class="qb">
+  — the demands for '<strong>multiple use</strong>' parks allowing extractive industries（要求允许采掘业的"多用途"公园诉求）<br>
+  — the demands of lobby groups seeking access for a range of recreational activities（寻求多种休闲活动准入的游说群体）<br>
+  — and the aspirations of indigenous groups for title and management of parks（原住民群体对公园产权和管理权的诉求）
+</div>
+<p>The traditional conception of protected areas is the uninhabited, minimal interference park — this is an overtly '<span class="hr">preservationist</span>' position. However, in much of the world population pressures are dictating that excluding human presence from protected areas is no longer feasible.</p>
+<p>In the Caracas Action Plan, the major strategy document to come out of the IVth World Congress on National Parks and Protected Areas in Venezuela in 1992, the shift away from an overt preservationist position toward a human-needs orientation is unambiguous: <span class="hb">'Protected areas must be managed so that local communities, the nations involved and the world community all benefit'</span> (IUCN, 1992: 14).</p>
+</div>
+<div class="trans-strip">
+  <div class="tl"><span class="ten">galvanized public support for conservation.</span><span class="tcn">（这些问题）激发了公众对保护事业的支持。</span></div>
+  <div class="tl"><span class="ten">In 1962, there were 1000 protected areas covering 3% of the earth's surface, now there are 102,100 covering 18.8 million square kilometers or 11.5% of the Earth's land surface.</span><span class="tcn">1962年只有1000个保护区，覆盖地球表面积的3%；现在已有102,100个，覆盖1880万平方公里，占地球陆地表面的11.5%。</span></div>
+  <div class="tl"><span class="ten">excluding human presence from protected areas is no longer feasible.</span><span class="tcn">将人类存在排除于保护区之外已不再可行。</span></div>
+  <div class="tl"><span class="ten">Protected areas must be managed so that local communities, the nations involved and the world community all benefit.</span><span class="tcn">保护区必须以让当地社区、相关国家和全球社会都能受益的方式加以管理。</span></div>
+</div>
+</div>
+<div class="col-r">
+<div class="anno-card ab">
+<div class="ac-head">📊 实证数据 Evidence</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">保护区增长数据：</span>从1962年的1000个到现在的102,100个，增长超过100倍——这一数据既证明了保护意识的提升，也说明管理挑战成比例增加。数据来源是Bushell和Eagles，具有较高学术可信度。</div>
+</div>
+</div>
+<div class="anno-card ay">
+<div class="ac-head">💡 核心论点 Thesis</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">根本矛盾：</span>第四章的核心张力是"保护（preservation）vs. 利用（use）"——保护区越来越多，但也越来越需要向人类活动开放。生态旅游被定位为这一矛盾的潜在调和者。</div>
+<div class="ac-s"><span class="lb">政策转向：</span>卡拉卡斯行动计划（1992）标志着官方保护区政策从"纯保护"转向"兼顾人类利益"，这是生态旅游合法性的重要政策依据。</div>
+</div>
+</div>
+<div class="vbox"><div><span class="ew">galvanized</span> <span class="cw">激励/动员/激发</span></div><div class="cd">galvanize = 通过电流使金属沉积（镀锌），引申为"用强力刺激使行动"。galvanized public support = 有力地动员/激发了公众支持。</div></div>
+<div class="vbox"><div><span class="ew">preservationist</span> <span class="cw">保存主义者/纯保护立场</span></div><div class="cd">主张完全不允许人类干预自然区域的立场（相对于"保育主义"/conservationist，后者允许有限的可持续利用）。在现实政治压力下，纯保存立场越来越难以为继。</div></div>
+<div class="vbox"><div><span class="ew">multiple use</span> <span class="cw">多用途（用地）</span></div><div class="cd">允许在同一区域内进行多种用途（旅游、林业、采矿等）的土地管理理念，与专项保护区相对。往往是开发利益的论据。</div></div>
+<div class="vbox"><div><span class="ew">in perpetuity</span> <span class="cw">永久地/永远</span></div><div class="cd">perpetuity = 无限期持续。"protected in perpetuity"= 永久保护，反映了对子孙后代利益的长远考量。</div></div>
+</div>
+</div>
+
+<!-- Protected areas p.65-66 IUCN -->
+<div class="page-block">
+<div class="col-l">
+<div class="page-num">原文 p.65-66</div>
+<div class="en-text">
+<p>Nowhere are the conflicting views over intrinsic and utilitarian value more evident than the current debate over the function and purpose of protected areas. It is a conflict over two primary orientations, '<span class="hr">preservation</span>' versus '<span class="hr">use</span>', and tourism in protected areas embodies precisely this dilemma.</p>
+<p>Although protected areas are not conceived identically across the world, the International Union of the Conservation of Nature provides a general definition:</p>
+<div class="qb"><em>'An area of land and/or sea especially dedicated to the protection and maintenance of biological diversity, and of natural and associated cultural resources, and managed through legal or other effective means.'</em><br>【译】专门致力于保护和维持生物多样性及自然与相关文化资源，并通过法律或其他有效手段加以管理的陆地和/或海洋区域。</div>
+<p>Within the definition, six different categories have been identified:</p>
+<div class="qb">
+  <strong>Category Ia</strong> Strict Nature Reserve：严格自然保护区（主要用于科学研究）<br>
+  <strong>Category Ib</strong> Wilderness Area：荒野区（主要用于荒野保护）<br>
+  <strong>Category II</strong> National Park：国家公园（生态系统保护+休闲）<br>
+  <strong>Category III</strong> Natural Monument：自然纪念物（特定自然特征保护）<br>
+  <strong>Category IV</strong> Habitat/Species Management Area：栖息地/物种管理区<br>
+  <strong>Category V</strong> Protected Landscape/Seascape：保护性景观（景观保护+休闲）<br>
+  <strong>Category VI</strong> Managed Resource Protected Area：资源管理保护区（可持续利用）
+</div>
+</div>
+<div class="trans-strip">
+  <div class="tl"><span class="ten">Nowhere are the conflicting views over intrinsic and utilitarian value more evident than the current debate over the function and purpose of protected areas.</span><span class="tcn">关于保护区功能与目的的当代争论，最清晰地体现了内在价值观与功利价值观之间的冲突。</span></div>
+</div>
+</div>
+<div class="col-r">
+<div class="anno-card ar">
+<div class="ac-head">🔑 关键概念 Key Term</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">IUCN六类保护区（考试高频）：</span>从最严格（Ia=严格自然保护区，禁止人类活动）到最宽松（VI=可持续资源利用），体现了保护与利用的连续谱系。生态旅游主要在II类（国家公园）和V类（保护性景观）中发生。</div>
+</div>
+</div>
+<div class="vbox"><div><span class="ew">utilitarian value</span> <span class="cw">功利价值/实用价值</span></div><div class="cd">基于"对人类的用处"来衡量价值的立场，与intrinsic value（内在价值，不依赖于对人类的效用）相对。保护区政策中两种价值观的张力是全书哲学讨论的延伸。</div></div>
+<div class="vbox"><div><span class="ew">biological diversity</span> <span class="cw">生物多样性</span></div><div class="cd">IUCN保护区定义的核心目标。包括物种多样性、遗传多样性和生态系统多样性三个层次。</div></div>
+</div>
+</div>
+
+<!-- Capitalist realism p.67-73 -->
+<div class="sub-section" id="ch4-cap">
+<div class="sub-header">
+  <h3>二、保护区与资本现实主义（第67-73页）</h3>
+  <div class="en">Protected Areas and Capitalist Realism — Economic justification of parks pp.67-73</div>
+</div>
+</div>
+<div class="page-block first">
+<div class="col-l">
+<div class="page-num">原文 p.67-70</div>
+<div class="en-text">
+<p>Across the industrialized west the role of government is shrinking with many former government controlled sectors — insurance, health, education, energy, water, transport, and banking — being increasingly removed from public ownership and control in a shift toward a corporate/profit rather than public interest model. The impacts of this change have seen no sphere of government exempt from the market-based rationale. In this way protected area agencies have also found themselves under intense pressure to be more <span class="ho">'commercial', 'customer focused'</span> and to produce more of their revenue from the services provided by parks.</p>
+<p><span class="hy">The imperative for conservation advocates becomes how to conserve rather than whether or not to conserve.</span> However urgent it may be to wake people up to physical and ecological changes, environmental reformers also need political philosophies. In this way <span class="hy">ecotourism, as a sustainable development strategy, is increasingly being turned to as part of a political philosophy for protected area managers and conservation agencies as a means of providing practical outcomes in the struggle to provide a basis for continued protection for these areas.</span> These outcomes include:</p>
+<div class="qb">
+  — a source of finance for parks and conservation and therefore providing a justification (economic) for park protection（为公园和保护提供资金来源，从而提供经济上保护公园的正当理由）<br>
+  — an alternative form of economic development（替代性经济发展形式）<br>
+  — the broadening of conservation issues within the general public（向普通公众拓展保护议题）<br>
+  — the facilitation of a private conservation ethic（促进私人保护伦理的形成）
+</div>
+<p>However, to argue that protected areas are a resource that can be enjoyed for recreation and tourism poses a serious dilemma. This dilemma is one of current protections based on utilitarian objectives and of future conservation based on intrinsic value. <span class="hg">Are these approaches compatible or, more importantly, can either contribute toward conservation?</span></p>
+<p><span class="hy">Many studies are now being used to show that protected areas make an economic contribution of some significance.</span> Tourism is becoming increasingly central to these strategies given that tourists are willing to pay to experience these natural areas.</p>
+<p>The question of who gets the benefits and who pays the costs is complex. Although visitors expect some tourism money to directly benefit the local population surrounding the area, in some cases little of that money is actually distributed to the local communities. Moreover, <span class="hb">much of the economic impact literature focuses only on benefits. Limited attention has been given to the economic costs imposed by the infrastructure developed to attract, accommodate and facilitate tourism or to the costs of maintaining and/or restoring park resources that are adversely affected by tourists.</span></p>
+<p><span class="hg">Arguments for tourism's ability to generate employment is also problematic as often employment goes to persons residing outside of the area. Wages also are typically low and tourism is highly seasonal in many areas.</span></p>
+</div>
+<div class="trans-strip">
+  <div class="tl"><span class="ten">The imperative for conservation advocates becomes how to conserve rather than whether or not to conserve.</span><span class="tcn">对保护倡导者而言，关键问题已经从"是否保护"变为"如何保护"。</span></div>
+  <div class="tl"><span class="ten">ecotourism...is increasingly being turned to as part of a political philosophy for protected area managers...</span><span class="tcn">生态旅游作为可持续发展战略，越来越多地被保护区管理者和保育机构作为一种政治哲学，以期为这些区域持续获得保护提供实际成果。</span></div>
+  <div class="tl"><span class="ten">much of the economic impact literature focuses only on benefits. Limited attention has been given to the economic costs...</span><span class="tcn">大量经济影响文献只关注收益，对于为吸引、接待和便利旅游者而建设的基础设施所带来的经济成本，以及维护或修复受旅游者不利影响的公园资源的成本，关注甚少。</span></div>
+</div>
+</div>
+<div class="col-r">
+<div class="anno-card ay">
+<div class="ac-head">💡 核心论点 Thesis</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">生态旅游作为政治哲学：</span>这是第四章最重要的论点——生态旅游不只是商业模式，更是保护区管理者在资本主义政治压力下"用经济理由为保护辩护"的政治策略。四个具体功能（资金、替代发展、公众意识、私人伦理）是其实现路径。</span></div>
+<div class="ac-s"><span class="lb">经济核算的片面性：</span>经济影响文献只算收益不算成本——这是作者对主流经济分析的关键批评，为后文"生态经济学"（full-cost accounting）论点铺垫。</div>
+</div>
+</div>
+<div class="anno-card ag">
+<div class="ac-head">🔄 让步/反驳 Concession</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">经济理由的局限：</span>作者承认"经济理由是现实中保护公园的有效工具"，但随即指出：仅靠功利/经济理由保护公园存在根本性脆弱——一旦替代用途（如采矿）带来更高经济回报，保护就会失去依据。这为接受内在价值论提供了实际论据。</div>
+</div>
+</div>
+<div class="vbox"><div><span class="ew">market-based rationale</span> <span class="cw">市场逻辑/市场理性</span></div><div class="cd">以市场效率和盈利能力为一切决策依据的思维方式。新自由主义政策的核心逻辑，也是政府缩减公共服务的理论依据。</div></div>
+<div class="vbox"><div><span class="ew">exempt from</span> <span class="cw">免于/不受…约束</span></div><div class="cd">exempt = 豁免。"no sphere of government exempt from market-based rationale" = 政府任何领域都不能免于市场逻辑的影响。</div></div>
+<div class="vbox"><div><span class="ew">full-cost accounting</span> <span class="cw">全成本核算</span></div><div class="cd">将所有社会和环境成本（不仅是直接财务成本）纳入经济核算的方法，是"生态经济学"的核心工具，能更准确反映旅游业的真实净收益。</div></div>
+</div>
+</div>
+
+<!-- Sustainable management techniques p.74-76 -->
+<div class="sub-section" id="ch4-mgmt">
+<div class="sub-header">
+  <h3>三、可持续管理技术（第74-76页）</h3>
+  <div class="en">Sustainable Management Techniques — Principles and frameworks pp.74-76</div>
+</div>
+</div>
+<div class="page-block first">
+<div class="col-l">
+<div class="page-num">原文 p.74-76</div>
+<div class="en-text">
+<p>While more conventional forms of tourism modify the surrounding environment to suit the specific needs of their clients, ecotourists do not expect or even desire substantial modifications of the natural environment. Rather than measuring the quality of the tour by conventional standards such as predictability and uniformity of experience, <span class="hy">'ecotourism's success is based on the unexpected'</span> (Williams, 1990: 84). Ecotourism provides the tourist with opportunities to discover and actively participate and interact with the surrounding environment, encouraging the tourist to assume a pro-active role in creating their own tourism experience.</p>
+<p><span class="hg">There is concern, however, that ecotourism will act much in the same manner as mass tourism only destroying the resource at a slower rate</span> (Bauer, 2001; Butler, 1992). In the short-term ecotourism is viewed as less conducive to causing change in destination areas than mass tourism, in part because of its dimensions and in part because of the need for fewer and smaller facilities (Butler, 1990). <span class="hg">However, it is thought that, over time, the cumulative effects of this activity may penetrate deeper into the environment and the surrounding communities, paving the way for mass tourism development</span> (Duffy, 2002).</p>
+<p><span class="hy">Ecotourism is premised on the idea that it can only be sustainable if the natural and cultural assets it is reliant upon survive and prosper.</span> This involves reducing social and biophysical impacts caused by visitors, reducing the leakage of potential benefits away from developing countries, increasing environmental awareness and action among tourists and opportunities for the people who would otherwise depend on the extraction of local resources.</p>
+<p><span class="hr">Carrying Capacity, Recreation Opportunity Spectrum (ROS), Limits of Acceptable Change (LAC), Visitor Impact Management (VIM) and Visitor Activity Management Process (VAMP)</span> are sustainability decision-making frameworks used in protected area management. When implemented they help to protect a country's natural and cultural heritage, enhance public appreciation of the resource, and manage the conflict between resource and user.</p>
+</div>
+<div class="trans-strip">
+  <div class="tl"><span class="ten">ecotourism's success is based on the unexpected.</span><span class="tcn">生态旅游的成功建立在"出乎意料"之上。</span></div>
+  <div class="tl"><span class="ten">There is concern that ecotourism will act much in the same manner as mass tourism only destroying the resource at a slower rate.</span><span class="tcn">有一种担忧认为，生态旅游的行为方式与大众旅游大同小异，只是以更慢的速度破坏资源而已。</span></div>
+  <div class="tl"><span class="ten">Ecotourism is premised on the idea that it can only be sustainable if the natural and cultural assets it is reliant upon survive and prosper.</span><span class="tcn">生态旅游建立在这样一个前提之上：只有其所依赖的自然和文化资产得以存续和繁荣，它才能实现可持续。</span></div>
+</div>
+</div>
+<div class="col-r">
+<div class="anno-card ag">
+<div class="ac-head">🔄 让步/反驳 Concession</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">"慢速大众旅游"批评：</span>这是生态旅游研究中的经典批评——即便生态旅游者每人影响更小，随时间累积的效果仍可能等同于大众旅游。作者通过承认这一风险，为"严格管理框架"的必要性进行论证。</div>
+</div>
+</div>
+<div class="anno-card ar">
+<div class="ac-head">🔑 关键概念 Key Term</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">五大管理框架（考试重点）：</span>① CC（承载容量）② ROS（游憩机会谱系）③ LAC（可接受变化限度）④ VIM（访客影响管理）⑤ VAMP（访客活动管理流程）。这些框架将在后续小节逐一详细介绍。</div>
+</div>
+</div>
+<div class="vbox"><div><span class="ew">biophysical impacts</span> <span class="cw">生物物理影响</span></div><div class="cd">对生物（动植物）和物理（土壤、水、地形）环境造成的影响。比单纯的"生态影响"范围更广，包含所有自然系统。</div></div>
+<div class="vbox"><div><span class="ew">premised on</span> <span class="cw">以…为前提/建立在…基础上</span></div><div class="cd">premise = 前提（逻辑推理的出发点）。"premised on the idea that..." = 以……这一观念为基础/前提。</div></div>
+<div class="vbox"><div><span class="ew">cumulative effects</span> <span class="cw">累积效应</span></div><div class="cd">单次影响虽小，但多次重复叠加后造成的总体影响可能超过阈值。生态旅游管理中常被忽视的重要风险。</div></div>
+</div>
+</div>
+
+<!-- Carrying capacity p.77-79 -->
+<div class="sub-section" id="ch4-cc">
+<div class="sub-header">
+  <h3>四、承载容量与游憩机会谱系（第77-80页）</h3>
+  <div class="en">Carrying Capacity and Recreation Opportunity Spectrum (ROS) pp.77-80</div>
+</div>
+</div>
+<div class="page-block first">
+<div class="col-l">
+<div class="page-num">原文 p.77-79</div>
+<div class="en-text">
+<p><span class="hr">Carrying Capacity</span> is fundamental to environmental protection and sustainable development. It refers to <span class="hy">the maximum use of any site without causing negative effects on the resources, reducing visitor satisfaction, or exerting adverse impact upon the society, economy and culture of the area.</span></p>
+<p>The carrying capacity concept originated in the 1970s. Its central idea 'is that environmental factors set limits on the population that an area can sustain. When these limits are exceeded, the quality of the environment suffers and ultimately, its ability to support that population' (Stankey, 1991: 12).</p>
+<p>There are three main elements of tourism carrying capacity:</p>
+<div class="qb">
+  — <strong>Biophysical (ecological)</strong> – which relates to the natural environment（生物物理/生态承载力——与自然环境相关）<br>
+  — <strong>Socio-cultural</strong> – which relates primarily to the impact on the host population and its culture（社会文化承载力——主要与对主人口及文化的影响相关）<br>
+  — <strong>Facility</strong> – which relates to the visitor experience（设施承载力——与游客体验相关）
+</div>
+<p><span class="hg">However, carrying capacity has not been as useful as anticipated. Perhaps it was expected to reveal precisely 'how many is too many?' Instead, depending on assumptions and values, the result has been 'widely varying capacity estimates'</span> of types and levels of use (Stankey, 1991: 12). There are no absolute measurements of the resource's condition that can be defined as constituting 'crowding' or 'resource damage' (Stankey, 1991: 13).</p>
+<p><span class="hg">Carrying capacity analysis then has been virtually ignored because of the complexity of the parameters, and although tourism operators can be conscious that too many visitors will degrade the environment and diminish the experience of their clients in both recreation and tourism, there are very few examples of it being used by agencies to successfully limit tourism</span> (McCool and Lime, 2001).</p>
+<p><strong>The Recreation Opportunity Spectrum (ROS)</strong></p>
+<p><span class="hp">ROS is a framework for prescribing carrying capacities and managing recreational impacts. The process is largely a judgmental one, but establishes explicit standards regarding appropriate conditions for each opportunity class.</span> The ROS approach shifted attention from the type and amount of use an area receives to the <span class="hy">biophysical, social and managerial attributes of the park setting</span> (Prosser, 1986: 7).</p>
+<p>A recreation opportunity setting is the combination of physical, biological, social and managerial conditions that give value to a place (Clark and Stankey, 1979). ROS provides a systematic framework for looking at the actual distribution of opportunities and a procedure for assessing possible management actions.</p>
+</div>
+<div class="trans-strip">
+  <div class="tl"><span class="ten">the maximum use of any site without causing negative effects on the resources, reducing visitor satisfaction, or exerting adverse impact upon the society, economy and culture of the area.</span><span class="tcn">对任何地点的最大利用量，以不对资源造成负面影响、不降低游客满意度、不对该地区的社会、经济和文化产生不利影响为限。</span></div>
+  <div class="tl"><span class="ten">carrying capacity has not been as useful as anticipated...the result has been 'widely varying capacity estimates'.</span><span class="tcn">承载容量并未像预期的那样有用……结果是"差异悬殊的容量估算值"。</span></div>
+  <div class="tl"><span class="ten">ROS is a framework for prescribing carrying capacities and managing recreational impacts.</span><span class="tcn">游憩机会谱系（ROS）是一个用于规定承载容量和管理游憩影响的框架。</span></div>
+</div>
+</div>
+<div class="col-r">
+<div class="anno-card ar">
+<div class="ac-head">🔑 关键概念 Key Term</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">承载容量三要素：</span>生物物理（自然环境能承受多少）、社会文化（社区能承受多少）、设施（游客体验要求多少）。三者互相制约，最紧的那个决定最终承载量。</div>
+</div>
+</div>
+<div class="anno-card ag">
+<div class="ac-head">🔄 让步/反驳 Concession</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">承载容量的实践局限：</span>这是本章最重要的让步——理论上极好的承载容量工具，实践中几乎被忽视（very few examples of successful use）。原因：参数太复杂、"拥挤"缺乏客观标准、政治上不愿限制旅游数量。这直接导致了后续更复杂框架（LAC/VIM/VAMP）的发展。</div>
+</div>
+</div>
+<div class="vbox"><div><span class="ew">parameters</span> <span class="cw">参数/变量/影响因素</span></div><div class="cd">决定某一系统状态的可测量特征。承载容量参数包括土壤侵蚀率、动植物种群密度、游客满意度调查等，种类繁多且互相影响，难以简化为单一数字。</div></div>
+<div class="vbox"><div><span class="ew">prescribing</span> <span class="cw">规定/制定（标准）</span></div><div class="cd">prescribe = 开具处方（医学），引申为"规定/规范"。prescribing carrying capacities = 制定承载容量标准，强调这是一种主动管理行为而非被动观察。</div></div>
+<div class="vbox"><div><span class="ew">opportunity class</span> <span class="cw">机会级别/类别</span></div><div class="cd">ROS将游憩机会按从"原始荒野"到"高度开发城市"的连续谱系分为若干级别，每级别规定不同的管理标准和游客体验预期。</div></div>
+</div>
+</div>
+
+<!-- LAC VIM VAMP p.80-84 -->
+<div class="sub-section" id="ch4-lac">
+<div class="sub-header">
+  <h3>五、可接受变化限度（LAC）与访客影响管理（VIM/VAMP）（第80-84页）</h3>
+  <div class="en">LAC, VIM and VAMP — Advanced visitor management frameworks pp.80-84</div>
+</div>
+</div>
+<div class="page-block first">
+<div class="col-l">
+<div class="page-num">原文 p.80-84</div>
+<div class="en-text">
+<p><strong>Limits of Acceptable Change (LAC)</strong></p>
+<p><span class="hp">LAC methodology is an extension of the ROS concept and recognizes both the social and environmental dimensions of recreational impacts. It involves both resource managers and stakeholders in:</span></p>
+<div class="qb">
+  — identifying acceptable and achievable social and resource standards（确定可接受且可实现的社会与资源标准）<br>
+  — documenting gaps between desirable and existing circumstances（记录理想状态与现状之间的差距）<br>
+  — identifying management actions to close these gaps（确定消弥差距的管理行动）<br>
+  — monitoring and evaluating management effectiveness（监测和评估管理效果）
+</div>
+<p>The LAC planning system consists of nine steps:</p>
+<div class="qb">
+  1. Identifying concerns and issues（识别关切与问题）<br>
+  2. Defining and describing opportunity classes（定义和描述机会类别）<br>
+  3. Selecting indicators of resource and social conditions（选取资源与社会状况指标）<br>
+  4. Carrying out an inventory of resource and social conditions（开展资源与社会状况调查）<br>
+  5. Specifying standards for the resource and social indicators（制定资源与社会指标标准）<br>
+  6. Identifying alternative opportunity class allocations（识别替代性机会类别分配方案）<br>
+  7. Identifying management actions for each alternative（为每个方案确定管理行动）<br>
+  8. Evaluating and selecting an alternative（评估并选择方案）<br>
+  9. Implementing actions and monitoring conditions（实施行动并监测状况）
+</div>
+<p><span class="hy">The LAC framework mitigates the conflict between recreation, tourism and conservation. It defines the impacts associated with different levels of environmental protection. It also helps to set the basis for allowing environmental change consistent with, and appropriate and acceptable to, different types of recreational opportunities</span> (Stankey, 1991: 13).</p>
+<p>Significantly, <span class="hy">the LAC system does more than developing and extending the ROS framework. It also represents an important reformulation of key elements of the carrying capacity concept</span> (Prosser, 1986: 8). By directing attention away from the question 'how much recreation use is too much?' toward desired conditions, the LAC approach skirts around the use/impact conundrum.</p>
+<p><strong>Visitor Impact Management (VIM)</strong></p>
+<p>VIM process involves a combination of legislation/policy review, scientific problem identification (both social and natural) and analysis and professional judgment. The principles of VIM are as follows:</p>
+<div class="qb">
+  — Identifying unacceptable changes occurring as a result of visitor use（识别因游客使用而发生的不可接受变化）<br>
+  — Integrating VIM into existing agency planning, design and management processes（将VIM整合入现有机构规划、设计与管理流程）<br>
+  — Basing VIM on the best scientific understanding and situational information available（以现有最佳科学理解和情境信息为基础）<br>
+  — Identifying visitor impact problems by comparing standards for acceptable conditions with key indicators of impact（通过比较可接受条件标准与关键影响指标来识别访客影响问题）
+</div>
+<p><strong>Visitor Activity Management Process (VAMP)</strong></p>
+<p>VAMP relates to interpretation and visitor services. This framework involves the development of activity profiles which connect activities with the social and demographic characteristics of the participants, the activity setting requirements and trends affecting the activity.</p>
+<p><span class="hy">VAMP provides a framework to ensure that visitor understanding, appreciation and enjoyment of the resources are just as carefully and systematically considered as protection of natural resources.</span> 'Its strength is recognizing the demand and supply side of natural area management' (Newsome et al., 2002: 176).</p>
+</div>
+<div class="trans-strip">
+  <div class="tl"><span class="ten">The LAC framework mitigates the conflict between recreation, tourism and conservation.</span><span class="tcn">LAC框架缓解了休闲、旅游与保护之间的冲突。</span></div>
+  <div class="tl"><span class="ten">By directing attention away from the question 'how much recreation use is too much?' toward desired conditions, the LAC approach skirts around the use/impact conundrum.</span><span class="tcn">通过将注意力从"多少游憩使用量算太多"这一问题转向"期望条件"，LAC方法绕开了利用/影响两难困境。</span></div>
+  <div class="tl"><span class="ten">VAMP provides a framework to ensure that visitor understanding, appreciation and enjoyment of the resources are just as carefully and systematically considered as protection of natural resources.</span><span class="tcn">VAMP提供了一个框架，确保游客对资源的理解、欣赏和享受与自然资源保护一样得到细心、系统的考虑。</span></div>
+</div>
+</div>
+<div class="col-r">
+<div class="anno-card ap">
+<div class="ac-head">🔬 方法论 Methodology</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">LAC九步流程：</span>从"识别问题"到"实施监测"，是一个完整的决策循环。关键创新在于：不问"多少量是上限"，而问"我们希望这里是什么状态"——将关注点从数量控制转向质量管理。</div>
+<div class="ac-s"><span class="lb">三框架比较（考试重点）：</span>
+ROS = 管理资源设置（供给端）<br>
+LAC = 定义可接受变化条件（标准端）<br>
+VIM = 识别并管理不可接受影响（影响端）<br>
+VAMP = 理解并管理访客活动（需求端）<br>
+四者互补，共同构成完整的保护区访客管理体系。</div>
+</div>
+</div>
+<div class="vbox"><div><span class="ew">mitigates</span> <span class="cw">缓解/减轻</span></div><div class="cd">mitigate = 使（问题/冲突）变得不那么严重或有害。不是"解决"（solve），而是"减轻"——反映了作者对这些工具能力的审慎评估。</div></div>
+<div class="vbox"><div><span class="ew">conundrum</span> <span class="cw">难题/困境</span></div><div class="cd">无明显解决方案的复杂难题。"use/impact conundrum"= 利用与影响之间的两难困境：完全禁止利用不现实，完全开放又会破坏资源。</div></div>
+<div class="vbox"><div><span class="ew">demographic</span> <span class="cw">人口学的/人口统计的</span></div><div class="cd">与人口特征（年龄、性别、收入、教育程度等）相关的。VAMP通过分析游客的人口统计特征来预测其行为模式和需求。</div></div>
+<div class="vbox"><div><span class="ew">reformulation</span> <span class="cw">重新表述/重新架构</span></div><div class="cd">re-（重新）+ formulation（表述/配方）。LAC是对承载容量概念的"重新架构"——不改变目标（控制影响），但改变了提问方式（从数量到质量）。</div></div>
+</div>
+</div>
+
+<!-- Managing visitor use p.84-93 -->
+<div class="sub-section" id="ch4-vamp">
+<div class="sub-header">
+  <h3>六、管理访客使用——限制、分区、教育与收费（第84-93页）</h3>
+  <div class="en">Managing Visitor Use — Use limitation, zoning, education, user fees pp.84-93</div>
+</div>
+</div>
+<div class="page-block first">
+<div class="col-l">
+<div class="page-num">原文 p.85-92</div>
+<div class="en-text">
+<p>Once identified these limits must be strictly monitored in order to ensure that the baseline sustainability limits are maintained. Protected area authorities must then implement strategies to ensure that these limits are maintained.</p>
+<p><strong>Use Limitation</strong></p>
+<p>One fairly common and direct, <span class="ho">regulatory</span> type of visitor management is that of the 'use limitation'. While the small size of ecotour operators serves to limit tourist numbers somewhat, there may also be a need for managers to implement built in limits to control the size and number of tour operations acting within natural areas (Bunting, 1991). Research indicates that by <span class="hb">reducing crowding, particularly in camping areas, the quality of visitor experience tends to increase, although fewer people are able to experience the benefits of this.</span></p>
+<p>Regulations can be used to control the numbers of visitors entering a particular area in any given time period, their access points and the types of activities they may undertake. As well as implementing these controls, managers may find it necessary to employ some form of <span class="ho">deterrent</span> to the breaching of regulations. These deterrents are usually in the form of fines and other penalties which may be difficult to enforce due to limitations to surveillance.</p>
+<p><strong>Zoning</strong></p>
+<p>Zoning may also be used to control different uses in different parts of the region. It is a <span class="ho">multidimensional technique</span> that is driven by ecological data in order to balance the demands between protection and use. One of the most important outcomes is to ensure that 'activities in one zone do not <span class="ho">impinge</span> on the planned functions of another' (Buckley and Pannell, 1990: 29).</p>
+<p><strong>Education</strong></p>
+<p><span class="hy">No natural resource can be effectively managed without the support and backing of its users.</span> It follows that no system of natural area reserves can adequately fulfill its roles without the guidance of appropriate management objectives. Failure to fulfill such roles and provide appropriate information is likely to <span class="ho">alienate</span> some recreational users and decrease the level of public support for the reserve system as a whole.</p>
+<p><span class="hy">Although interpretation is believed by many to be the most powerful tool for visitor management it has rarely been incorporated fully into major planning mechanisms</span> (Roggenbuck, 1987). Nonetheless, the relationship between interpretation and management is now recognized as a fundamental one and that such programs should stem directly from management policies. For example, <span class="hy">interpretation significantly influences the carrying capacity of an area.</span></p>
+<p><strong>User Fees and Charges</strong></p>
+<p>User fees and charges have been gaining increased consideration as natural areas have become more popular for recreational use. There are a range of each and they are the methods of capturing revenue from visitation that is essential to channel back into conservation objectives:</p>
+<div class="qb">
+  — <strong>User fees</strong>: charges on 'users' of an area or facility such as park entrance, trekking fees, etc.（使用费：对区域或设施使用者收取的费用）<br>
+  — <strong>Concession</strong>: a fee for the permission to operate within a location for groups or individuals that provide certain services to visitors（特许经营费：允许在某地运营并向游客提供服务的费用）<br>
+  — <strong>Sales and royalties</strong>: fees levied on a percentage of earnings derived from activities or products at a site（销售费和版税：对地点活动或产品收益按比例征收的费用）<br>
+  — <strong>Taxation</strong>: an additional cost imposed upon goods and services that are used by ecotourists, such as airport taxes（税费）<br>
+  — <strong>Donations</strong>: tourists are often encouraged to contribute to maintaining a facility（捐款）
+</div>
+</div>
+<div class="trans-strip">
+  <div class="tl"><span class="ten">by reducing crowding...the quality of visitor experience tends to increase, although fewer people are able to experience the benefits of this.</span><span class="tcn">通过减少拥挤（尤其是营地区域），游客体验质量往往会提升，尽管能从中受益的人数会减少。</span></div>
+  <div class="tl"><span class="ten">No natural resource can be effectively managed without the support and backing of its users.</span><span class="tcn">任何自然资源都不能在没有使用者支持和配合的情况下得到有效管理。</span></div>
+  <div class="tl"><span class="ten">interpretation significantly influences the carrying capacity of an area.</span><span class="tcn">解说对一个地区的承载容量有重大影响。（通过教育减少不当行为，可实际提高承载上限。）</span></div>
+</div>
+</div>
+<div class="col-r">
+<div class="anno-card ay">
+<div class="ac-head">💡 核心论点 Thesis</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">四大管理工具：</span>限制使用（数量控制）、分区（空间控制）、教育/解说（行为控制）、收费（经济激励）。这四种工具组合使用是现代保护区访客管理的标准方法。</div>
+<div class="ac-s"><span class="lb">解说的特殊地位：</span>"解说影响承载容量"这一论点连接第四章与第五章——好的解说不只是提升体验，更是通过改变行为实际增加环境可承受游客数量的管理工具。</div>
+</div>
+</div>
+<div class="vbox"><div><span class="ew">deterrent</span> <span class="cw">威慑措施/阻止手段</span></div><div class="cd">通过惩罚或威胁（如罚款）来阻止不当行为的手段。管理中的"威慑"策略，与"教育"策略形成对比。</div></div>
+<div class="vbox"><div><span class="ew">impinge on</span> <span class="cw">侵犯/影响/干扰</span></div><div class="cd">impinge = 对某事物产生不利影响或侵犯其权利。"activities in one zone do not impinge on another" = 一个区域的活动不干扰另一个区域的规划功能。</div></div>
+<div class="vbox"><div><span class="ew">alienate</span> <span class="cw">疏远/使产生隔阂</span></div><div class="cd">alienate = 使某人对原本友好或支持的事物产生敌意或疏离。alienate recreational users = 使休闲使用者对保护区管理产生反感，从而失去公众支持基础。</div></div>
+<div class="vbox"><div><span class="ew">concession</span> <span class="cw">特许经营权</span></div><div class="cd">政府或公园管理机构允许私营企业在保护区内经营的权利（如餐厅、交通服务等），换取费用收入和服务质量标准遵守。</div></div>
+<div class="vbox"><div><span class="ew">multidimensional technique</span> <span class="cw">多维度技术/综合手段</span></div><div class="cd">从多个角度（生态、社会、经济、管理）同时考量的综合性管理方法，而非单一指标评估。</div></div>
+</div>
+</div>
+</div><!-- end ch4 -->
+
+<!-- ============================================================ -->
+<!-- CHAPTER 5 -->
+<!-- ============================================================ -->
+<section class="ch-section" id="ch5">
+<div class="ch-header">
+  <div><h2>第五章：解说在实现可持续未来中的作用</h2>
+  <div class="en">Chapter 5: The Role of Interpretation in Achieving a Sustainable Future</div></div>
+  <span class="ch-label">解说与教育</span>
+</div>
+
+<div class="page-block first">
+<div class="col-l">
+<div class="page-num">原文 p.95（章节开篇）</div>
+<div class="en-text">
+<div class="qb"><em>"Environmental interpretation involves translating the technical language of a natural science or related field into terms and ideas that people who aren't scientists can readily understand. And it involves doing it in a way that's entertaining and interesting to these people."</em><br>
+【译】"环境解说涉及将自然科学或相关领域的技术性语言转化为非科学人士能够轻松理解的术语和观念。而且这种转化要以令这些人感到有趣和愉快的方式进行。" (Ham, 1992: 3)</div>
+<p>It has been suggested that there is limited value in science (which provides the data upon which conservation is based) and management (which provides the tools) <span class="hy">without communication to share their respective insights and directions</span> (McCurdy, 1985). Past experience has shown us that many of the answers to today's environmental problems are far from clear, based as they are on scientific prediction only after the accumulation of evidence and therefore after significant impacts have already occurred.</p>
+<p>As we have seen in Chapter 1, <span class="hy">it is this recognition of interpretation and education's centrality to ecotourism that helps to differentiate ecotourism from other forms of nature-based tourism.</span> A focus on the dimensions of visitor experience reveals that the visitor is concerned not with simply looking at a setting or object, but with feeling and realizing some of its value. In this way, <span class="hy">interpretation is oriented toward a visitor's cognitive and emotional state in order to raise awareness, enhance understanding and hopefully, clarify or enlarge each participant's perspective and attitude. In this way, interpretation is essential to conservation goals.</span></p>
+</div>
+<div class="trans-strip">
+  <div class="tl"><span class="ten">there is limited value in science...without communication to share their respective insights and directions.</span><span class="tcn">如果没有沟通来分享各自的洞见和方向，科学（提供保护的数据基础）和管理（提供工具）的价值就非常有限。</span></div>
+  <div class="tl"><span class="ten">interpretation is oriented toward a visitor's cognitive and emotional state in order to raise awareness, enhance understanding and hopefully, clarify or enlarge each participant's perspective and attitude.</span><span class="tcn">解说以激发游客的认知和情感状态为导向，目的是提升意识、加深理解，并在理想情况下澄清或扩展每位参与者的视角与态度。</span></div>
+</div>
+</div>
+<div class="col-r">
+<div class="anno-card ay">
+<div class="ac-head">💡 核心论点 Thesis</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">第五章的核心主张：</span>解说不只是"给旅游加料"，而是生态旅游有别于普通自然旅游的本质性特征，是弥合"科学知识→保护行动"缺口的关键桥梁。</div>
+<div class="ac-s"><span class="lb">认知-情感双轨：</span>解说同时作用于认知（知识理解）和情感（价值认同）层面，这一双轨定位解释了为何解说比单纯信息传递更有效。</div>
+</div>
+</div>
+<div class="vbox"><div><span class="ew">cognitive and emotional state</span> <span class="cw">认知与情感状态</span></div><div class="cd">cognitive = 与思维、认知、理解有关的；emotional = 与情感、感受有关的。解说需同时触及游客的"知"（了解事实）和"感"（产生情感共鸣）。</div></div>
+</div>
+</div>
+
+<!-- Defining interpretation p.96-97 -->
+<div class="sub-section" id="ch5-def">
+<div class="sub-header">
+  <h3>一、解说的定义（第96-97页）</h3>
+  <div class="en">Defining Interpretation — Tilden's definition and beyond pp.96-97</div>
+</div>
+</div>
+<div class="page-block first">
+<div class="col-l">
+<div class="page-num">原文 p.96-97</div>
+<div class="en-text">
+<p>Regulations and restrictions do not necessarily change people's activities or attitude toward our environment (Cameron-Smith, 1977). Few people are satisfied in the knowledge that small pockets of natural wilderness exist if they cannot gain access to the areas. We can focus on regulation, but there could never be enough resources — rangers, firearms or patrol vehicles — to protect parks from visitors who do not care about it (McCurdy, 1985).</p>
+<p><span class="hy">Interpretation is effective because rather than regulating and enforcing behaviors and practices, it works with, rather than against the visitor.</span></p>
+<p>Many definitions of interpretation limit it to a kind of 'dressing-up' exercise for facts and figures, usually the translation of the technical language associated with natural science into terms and concepts that people can easily understand and enjoy (Ham, 1992). While this may be a part of what interpretation is, it is not limited to this aspect alone. Indeed, <span class="hr">Freeman Tilden (1977)</span>, in providing one of interpretation's most recognized definitions states that it is <span class="hy">'an educational activity which aims to reveal meaning and relationships through the use of original objects, by first-hand experience, and by illustrative media, rather than simply to communicate factual information'</span> (Tilden, 1977: 8).</p>
+<p>Tilden stressed that interpretation was not simply 'jazzed up information', it had a larger purpose — that of <span class="ho">revelation</span>. Although an environmental interpreter may use factual information to illustrate points and clarify meanings, it is concepts and ideals that they are first trying to communicate, not simply facts. This is what distinguishes interpretation from conventional education and instruction and it is in these terms that effective interpretation can be used as a basis for developing a conservation ethic within the community.</p>
+<p>The definition of interpretation provided by the Interpretation Australia Association is worth noting: Interpretation 'is a means of communicating ideas and feelings which help people understand more about themselves and their environment' (Interpretation Australia Association, 2008). This definition builds on the multicentric view and Tilden's stress on revelation, then adds the concept of <span class="ho">empowerment</span>, so that the end benefit rests with the audience of the interpretation — the visitor, or the ecotourist.</p>
+<p>It is worth contrasting interpretation from education: <span class="hy">Education is a more formalized version of interpretation. Whereas interpretation tries to capture the attention of visitors, education typically has a 'captive audience' and can therefore develop facilities and programs specifically designated for education.</span></p>
+</div>
+<div class="trans-strip">
+  <div class="tl"><span class="ten">Interpretation is effective because rather than regulating and enforcing behaviors and practices, it works with, rather than against the visitor.</span><span class="tcn">解说之所以有效，是因为它是与游客合作，而非对抗游客——它不靠强制行为和实践，而是顺着游客的意愿引导。</span></div>
+  <div class="tl"><span class="ten">'an educational activity which aims to reveal meaning and relationships through the use of original objects, by first-hand experience, and by illustrative media, rather than simply to communicate factual information.'</span><span class="tcn">"一种教育活动，旨在通过运用原始实物、第一手体验和图示媒介来揭示意义与关联，而非仅仅传递事实信息。"（Tilden, 1977）</span></div>
+  <div class="tl"><span class="ten">Education is a more formalized version of interpretation...education typically has a 'captive audience'...</span><span class="tcn">教育是解说的更正式版本……教育通常有"被动受众"（如坐在教室里的学生），因此可以开发专门的教育设施和项目。</span></div>
+</div>
+</div>
+<div class="col-r">
+<div class="anno-card ar">
+<div class="ac-head">🔑 关键概念 Key Term</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">Tilden定义的核心：</span>"揭示意义与关联"（reveal meaning and relationships）——解说的目的是让游客"顿悟"，而非填鸭式灌输知识。这区别于普通教学，也是解说能影响价值观的原因。</div>
+<div class="ac-s"><span class="lb">解说 vs. 教育：</span>解说=非正式+以抓住自愿受众注意力为目标+多用第一手体验；教育=正式+有被动受众+课程体系。两者目标相近但方法不同。</div>
+<div class="ac-s"><span class="lb">单中心 vs. 多中心方法：</span>单中心（unicentric）= 只呈现一种立场（如保护机构的官方观点）；多中心（multicentric）= 呈现多元视角，让游客自己得出结论。多中心方法更尊重游客的主体性。</div>
+</div>
+</div>
+<div class="vbox"><div><span class="ew">revelation</span> <span class="cw">揭示/顿悟/启示</span></div><div class="cd">reveal = 揭露原本隐藏的东西。在解说语境中指帮助游客"看见"自然/文化的深层意义，产生"啊，原来如此！"的顿悟体验，这种体验比单纯获取信息更能改变价值观。</div></div>
+<div class="vbox"><div><span class="ew">empowerment</span> <span class="cw">赋权/赋能</span></div><div class="cd">使人获得知识、技能和信心以做出自主决定的过程。解说的最终目标是让游客有能力自己理解和保护环境，而非依赖解说者的权威。</div></div>
+<div class="vbox"><div><span class="ew">captive audience</span> <span class="cw">被动受众/强制听众</span></div><div class="cd">没有选择权、必须听讲的受众（如学生、会议参与者）。与解说的"自愿受众"形成对比——吸引自愿受众注意力是解说更大的挑战。</div></div>
+</div>
+</div>
+
+<!-- Changing attitudes p.98-99 -->
+<div class="sub-section" id="ch5-change">
+<div class="sub-header">
+  <h3>二、改变理解、态度与行为（第98-99页）</h3>
+  <div class="en">Changing Understanding, Attitudes and Behavior pp.98-99</div>
+</div>
+</div>
+<div class="page-block first">
+<div class="col-l">
+<div class="page-num">原文 p.98-99</div>
+<div class="en-text">
+<p>In order to understand how interpretation works, it is important to understand how interpretation relates to attitudinal and behavioral change in contributing to environmental awareness. If we argue for greater use of interpretation as a means of generating attitudes and behavioral choice that will assist in conserving our environment we must have some idea of how the process of gaining an environmental consciousness occurs.</p>
+<p>Research by Beaumont (1997) suggests that <span class="hb">interpretation can induce a change in understanding and a positive shift in attitude among individuals who already have some form of conservation ethic.</span> <span class="hg">Otherwise there is little evidence to support that on-site interpretation altered visitor attitudes towards sustainable tourism</span> (Hill et al., 2007; Hughes and Saunders, 2005). A recent analysis by Munro et al. (2008) of interpretation evaluation literature indicates that <span class="hb">few studies extend to the measurement of behavioral change.</span> Therefore, due to the large number of possible variables and small number of studies undertaken on this topic, it is difficult to make any substantive conclusions on the role of interpretation in promoting more sustainable visitor behavior. Thus, <span class="hg">interpretation may neither necessarily lead to a conservation ethic and flow-on behavior, nor even retention of a positive environmental attitude.</span></p>
+<p>However, this may be due to the standard of interpretation being delivered not reaching a level that induces visitors to shift their position. Fundamentally, they require an experience that will change their basic thinking of the environment and its preservation (Forestell, 1990).</p>
+<p>Clearly, <span class="hy">the ability of interpretation to enact attitudinal change is in large part dependent upon the availability and effectiveness of resources to provide material that can be understood by the general public and is able to maintain their interest both on-site and post-experience.</span></p>
+</div>
+<div class="trans-strip">
+  <div class="tl"><span class="ten">interpretation can induce a change in understanding and a positive shift in attitude among individuals who already have some form of conservation ethic.</span><span class="tcn">解说能够在已具有某种保育伦理的个体中引发理解的改变和态度的积极转变。</span></div>
+  <div class="tl"><span class="ten">there is little evidence to support that on-site interpretation altered visitor attitudes towards sustainable tourism.</span><span class="tcn">几乎没有证据支持"现场解说改变了游客对可持续旅游的态度"这一说法。</span></div>
+  <div class="tl"><span class="ten">interpretation may neither necessarily lead to a conservation ethic and flow-on behavior, nor even retention of a positive environmental attitude.</span><span class="tcn">解说不一定必然导向保育伦理及其带动的行为，甚至不一定能使游客保持积极的环境态度。</span></div>
+</div>
+</div>
+<div class="col-r">
+<div class="anno-card ag">
+<div class="ac-head">🔄 让步/反驳 Concession</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">解说有效性的实证局限：</span>这是本章最重要的让步——实证研究发现解说改变行为的证据非常有限。Beaumont的研究甚至显示解说只对"已有保育意识"者有效，对完全无动于衷者收效甚微。</div>
+<div class="ac-s"><span class="lb">局限的解释：</span>作者将此归因于"解说质量不够高"（而非解说本身无效），从而为本章后续提出改善解说的原则和技术保留了空间。这是论证策略的精妙之处。</div>
+</div>
+</div>
+<div class="vbox"><div><span class="ew">attitudinal change</span> <span class="cw">态度改变</span></div><div class="cd">attitude = 对某事物的持久性评价倾向（好/坏、重要/不重要等）。attitudinal change = 这种倾向的持久转变，比"改变想法"更深层，更难实现。</div></div>
+<div class="vbox"><div><span class="ew">substantive conclusions</span> <span class="cw">实质性结论</span></div><div class="cd">substantive = 有实质内容的、重要的（而非表面或形式的）。substantive conclusions = 有足够证据支撑、具有实际意义的结论，而非仅仅是推测。</div></div>
+<div class="vbox"><div><span class="ew">induce</span> <span class="cw">诱导/引发/促使</span></div><div class="cd">induce = 通过说服或刺激使某人采取某种行动或状态。induce a change = 促使改变发生，比"cause"更强调主动引导而非强制。</div></div>
+</div>
+</div>
+
+<!-- Interpretation techniques p.99-103 -->
+<div class="sub-section" id="ch5-tech">
+<div class="sub-header">
+  <h3>三、解说技术（第99-103页）</h3>
+  <div class="en">Interpretation Techniques — Visitor centers, guided tours, etc. pp.99-103</div>
+</div>
+</div>
+<div class="page-block first">
+<div class="col-l">
+<div class="page-num">原文 p.99-103</div>
+<div class="en-text">
+<p>There are more ways to interpret than one could hope to cover because each technique is like a piece of artwork, crafted from the creativity of the interpreter.</p>
+<p><strong>Visitor Centers</strong></p>
+<p>Visitor centers are special buildings or rooms in which exhibits and displays can be presented in relative comfort and controlled surroundings. Exhibits may include photographs arranged in wall or panel displays, map models, mounted specimens or diagrams. <span class="hy">Visitor centers are very useful for showing 'the big picture' such as processes, histories and other features that cannot be easily depicted on-site.</span> The most effective visitor centers are designed from the inside out, meaning that their interpretive theme and purpose drives the design and construction of the building, rather than vice versa.</p>
+<p><strong>Education Centers</strong></p>
+<p>Education centers usually feature low-key classrooms to hold activities and discussion sessions, though the surrounding environment outside the environment center is critical to delivering many of the activities. The most effective education centers are those containing one or more full-time education officers who have developed their programs to <span class="ho">dovetail with</span> school curricula.</p>
+<p><strong>Displays and Exhibits</strong></p>
+<p>Displays and exhibits are typically developed as permanent features within a museum or visitor/education center, or as a mobile 'mini-center' or mobile display. They typically feature objects and specimens, dioramas, scale models, live exhibits, panels of text, diagrams and photographs. Displays and exhibits are useful because they are relatively cost effective, and are portable enough to be located indoors or outdoors. The most effective exhibits are designed with a specific audience in mind.</p>
+<p><strong>Self-guided Trails</strong></p>
+<p>Self-guided trails involve a series of prescribed stops along a route that visitors travel. The route may be a road, a walking track, a river or a railway line. Each stop provides a feature that is interpreted via a brochure, a sign or an audio facility such as radio or cassette. <span class="hy">A self-guided trail allows the visitor freedom to move at their own pace, stopping for as long as they want.</span></p>
+<p><strong>Guided Tours</strong></p>
+<p><span class="hy">Face-to-face interpretation is considered to be one of the most powerful and worthwhile interpretive techniques available because it can be continually tuned to the type of visitor(s) participating.</span> In terms of commercially run ecotourism, guided tours are perhaps the most widely used technique. The method is especially useful with school children and formal tour groups or as a means of controlling where visitors go and what they do. A trained guide accompanying a group discusses features along a predetermined route, adding additional detail or perspectives according to the interests and responses of the group.</p>
+<p>One of the strengths of guided tours is that the guide can adapt what is said to the particular interest of each group. Guides working for ecotourism operators must be knowledgeable about many aspects of the attractions and be fluent in the major languages of visitors. One of the limitations of guided tours is their high cost per visitor, and their continual reliance on the personality and commitment of the guide to deliver a high-quality experience.</p>
+</div>
+<div class="trans-strip">
+  <div class="tl"><span class="ten">Visitor centers are very useful for showing 'the big picture' such as processes, histories and other features that cannot be easily depicted on-site.</span><span class="tcn">访客中心非常适合展示"宏观图景"，如难以在现场直观呈现的生态过程、历史背景和其他特征。</span></div>
+  <div class="tl"><span class="ten">Face-to-face interpretation is considered to be one of the most powerful and worthwhile interpretive techniques available because it can be continually tuned to the type of visitor(s) participating.</span><span class="tcn">面对面解说被认为是最有效、最有价值的解说技术之一，因为它能够根据参与游客的类型持续调整。</span></div>
+  <div class="tl"><span class="ten">A self-guided trail allows the visitor freedom to move at their own pace, stopping for as long as they want.</span><span class="tcn">自导式游径让游客可以按自己的节奏自由行进，随意在某处停留多久。</span></div>
+</div>
+</div>
+<div class="col-r">
+<div class="anno-card ap">
+<div class="ac-head">🔬 方法论 Methodology</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">五种技术的比较：</span>
+访客中心 = 宏观视野+受控环境+高投入<br>
+教育中心 = 正式课程整合+专业人员<br>
+展示/展览 = 成本效益好+可移动<br>
+自导游径 = 游客自主+低人力成本<br>
+导游解说 = 最有力+最灵活+成本最高<br><br>
+导游解说被认为最有效，但成本最高且依赖个人能力——这一矛盾是生态旅游运营的核心挑战。</div>
+</div>
+</div>
+<div class="vbox"><div><span class="ew">dovetail with</span> <span class="cw">与…紧密配合/吻合</span></div><div class="cd">dovetail = 燕尾榫（木工接合方式），引申为"完美匹配"。dovetail with school curricula = 与学校课程紧密衔接，使教育中心的项目能与正规教育相互补充。</div></div>
+<div class="vbox"><div><span class="ew">diorama</span> <span class="cw">立体模型/全景场景</span></div><div class="cd">三维立体展示场景，通常用微型模型和背景画面模拟真实环境（如博物馆中的自然生态场景）。</div></div>
+<div class="vbox"><div><span class="ew">predetermined route</span> <span class="cw">预定路线</span></div><div class="cd">事先规划好的游览路线。导游解说沿预定路线进行，但优秀导游会根据游客反应灵活调整内容深度。</div></div>
+</div>
+</div>
+
+<!-- Principles + Benefits p.103-111 -->
+<div class="sub-section" id="ch5-benefits">
+<div class="sub-header">
+  <h3>四、成功解说的原则与效益（第103-111页）</h3>
+  <div class="en">Principles for Successful Interpretation and Benefits pp.103-111</div>
+</div>
+</div>
+<div class="page-block first">
+<div class="col-l">
+<div class="page-num">原文 p.103-111</div>
+<div class="en-text">
+<p><strong>Principles for Successful Interpretation</strong></p>
+<p>Successful interpretation typically reflects a number of key principles:</p>
+<div class="qb">
+  — <strong>people learn better when they are actively involved in the learning process</strong>（当人们积极参与学习过程时学习效果更好）<br>
+  — people learn better when they are using as many senses as appropriate. It is generally recognized that <strong><span class="hb">people retain approximately 10% of what they hear, 30% of what they read, 50% of what they see and 90% of what they do</span></strong>（感官参与越多，记忆保留越多：听=10%，读=30%，看=50%，做=90%）<br>
+  — insights that people discover for themselves are the most memorable as they stimulate a sense of excitement and growth（自己发现的洞见最令人难忘）<br>
+  — learning requires activity on the part of the learner（学习需要学习者的主动参与）<br>
+  — being aware of the usefulness of the knowledge being acquired makes the learning process more effective（了解所获知识的实用性使学习更有效）<br>
+  — people learn best from first-hand experience（人们从第一手体验中学习效果最好）
+</div>
+<p>With these factors in mind it should be possible to develop an effective communication network that promotes ecotourism and subsequently a conservation ethic. Interpretation should leave the ecotourist with a sense of enjoyment and satisfaction, and a perception that environmental conservation and the principles of sustainability are worthwhile thus satisfying conservation objectives (Forestell, 1990).</p>
+<p><strong>The Benefits of Interpretation</strong></p>
+<p>Along with interpretation's role in value-adding to the visitor experience through enhancing and facilitating the setting being explored, there are four key areas of potential benefits:</p>
+<div class="qb">
+  — <strong>promotional benefits</strong>（推广效益）<br>
+  — <strong>recreational benefits</strong>（休闲效益）<br>
+  — <strong>educational benefits</strong>（教育效益）<br>
+  — <strong>management/conservation benefits</strong>（管理/保育效益）<br>
+  — <strong>economic benefits</strong>（经济效益）
+</div>
+<p><span class="hy">Although interpretation is believed by many to be the most powerful tool for visitor management it has rarely been incorporated fully into major planning mechanisms</span> (Roggenbuck, 1987).</p>
+<p><strong>Problems limiting interpretation</strong></p>
+<p>Interpretation has suffered from the perception that it is simply 'the icing on the cake' instead of being an integral part of the ecotourism product base. Indeed, Australia's National Ecotourism Accreditation Program in its first year of operation found the quality and commitment to interpretation to be one of the weaker elements of the operators seeking accreditation (McArthur, 1997a).</p>
+<p><span class="hy">Interpretation is not just the communication of information, regardless of how jazzed up and enjoyable it becomes. Interpretation seeks to reveal the meaning and stimulate a cognitive and emotional response.</span> This response should impel people into reconsidering their value base and behavior. The way in which interpretation is delivered can be as varied as the individual imagination, and, generally speaking, the more imaginative the approach, the more successful the interpretation.</p>
+<p><span class="hy">Interpretation is a core part of any ecotourism experience. As such, interpretation adds real value for the operator, distinguishing the product from nature-based tourism.</span> Interpretation is also critical to the protected area manager, as it offers a chance to present values and conservation ethics, and at a more practical level, provides the opportunity to minimize visitor impact. Within both these sectors, interpretation is yet to realize anything like its full potential.</p>
+</div>
+<div class="trans-strip">
+  <div class="tl"><span class="ten">people retain approximately 10% of what they hear, 30% of what they read, 50% of what they see and 90% of what they do.</span><span class="tcn">人们记住的信息大约是：听到的10%，读到的30%，看到的50%，亲身经历的90%。</span></div>
+  <div class="tl"><span class="ten">Interpretation has suffered from the perception that it is simply 'the icing on the cake' instead of being an integral part of the ecotourism product base.</span><span class="tcn">解说一直受到"不过是锦上添花"这种认知的制约，而没有被视为生态旅游产品基础的核心组成部分。</span></div>
+  <div class="tl"><span class="ten">Interpretation is a core part of any ecotourism experience. As such, interpretation adds real value for the operator, distinguishing the product from nature-based tourism.</span><span class="tcn">解说是任何生态旅游体验的核心组成部分。因此，解说为运营商增添了真实价值，使生态旅游产品有别于普通的自然旅游。</span></div>
+</div>
+</div>
+<div class="col-r">
+<div class="anno-card ay">
+<div class="ac-head">💡 核心论点 Thesis</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">解说六原则（重要考点）：</span>①积极参与 ②多感官学习（10/30/50/90法则）③自我发现 ④学习者主动性 ⑤知识实用性意识 ⑥第一手体验。这些原则都指向同一核心：体验式学习优于被动信息接受。</div>
+<div class="ac-s"><span class="lb">解说五大效益：</span>推广效益、休闲效益、教育效益、管理/保育效益、经济效益。注意：经济效益是解说的"副产品"而非主要目标，这与大众旅游的逻辑形成对比。</div>
+<div class="ac-s"><span class="lb">最终论断：</span>"解说是生态旅游与自然旅游的本质区别"——这是第五章乃至全书关于解说的核心命题，与第一章定义四要素中的第④条（教育功能）首尾呼应。</div>
+</div>
+</div>
+<div class="anno-card ag">
+<div class="ac-head">🔄 让步/反驳 Concession</div>
+<div class="ac-body">
+<div class="ac-s"><span class="lb">"锦上添花"的批评：</span>作者承认解说在实践中常被视为可选附加项，澳大利亚认证项目的评估也发现解说是运营商最薄弱的环节。但这只强化了作者的主张——解说的潜力尚未充分发挥，而非解说本身不重要。</div>
+</div>
+</div>
+<div class="vbox"><div><span class="ew">icing on the cake</span> <span class="cw">锦上添花/额外装饰</span></div><div class="cd">字面意思是"蛋糕上的糖霜"，比喻可有可无的装饰性附加物，而非核心必需品。作者批判将解说视为"icing"的态度，认为解说应是"蛋糕本身"的组成部分。</div></div>
+<div class="vbox"><div><span class="ew">impel</span> <span class="cw">驱使/迫使</span></div><div class="cd">impel = 推动某人去做某事（带有内在动力的含义，比force更温和但比encourage更强）。impel people into reconsidering = 驱动人们重新审视自身价值观。</div></div>
+<div class="vbox"><div><span class="ew">value-adding</span> <span class="cw">增值/附加价值</span></div><div class="cd">在产品或服务基础上增加额外价值的过程。解说为生态旅游体验"增值"，使游客愿意支付更高价格，也为运营商提供竞争优势。</div></div>
+<div class="vbox"><div><span class="ew">integral</span> <span class="cw">不可或缺的/整体性的</span></div><div class="cd">integral = 作为整体必要组成部分的（而非附加的）。"integral part of the ecotourism product base" = 生态旅游产品基础中不可缺少的构成要素。</div></div>
+</div>
+</div>
+</div><!-- end ch5 -->
+
+<!-- ============================================================ -->
+<!-- ARGUMENT MAP -->
+<!-- ============================================================ -->
+<div class="arg-map" id="arg-map">
+<h2>📐 第3-5章论证结构总览</h2>
+<p class="sub">Chapter 3 政策框架 → Chapter 4 保护区管理 → Chapter 5 解说功能 ｜ 整体逻辑骨架</p>
+
+<div class="arg-chain">
+  <div class="arg-node">
+    <div class="nl">① 问题 Ch.3</div>
+    <div class="nc">旅游业有巨大潜力，但现实中漏损严重、社区受损、管理缺位——"游客先于管理"是根本困境</div>
+  </div>
+  <div class="arg-node">
+    <div class="nl">② 政策回应 Ch.3</div>
+    <div class="nc">需要政府主导+行业自律+社区参与的三层合作规划体系，分区制和最佳实践是核心工具</div>
+  </div>
+  <div class="arg-node">
+    <div class="nl">③ 场所冲突 Ch.4</div>
+    <div class="nc">保护区是生态旅游核心场所，但面临"保护vs.利用"根本矛盾；生态旅游被定位为经济+政治上为保护区辩护的工具</div>
+  </div>
+  <div class="arg-node">
+    <div class="nl">④ 管理框架 Ch.4</div>
+    <div class="nc">CC→ROS→LAC→VIM→VAMP：从数量管控到质量导向的管理框架演进；分区、限量、教育、收费是核心手段</div>
+  </div>
+  <div class="arg-node">
+    <div class="nl">⑤ 核心工具 Ch.5</div>
+    <div class="nc">解说是生态旅游区别于普通自然旅游的本质特征；通过认知+情感双轨改变游客行为，实际上可提升承载容量</div>
+  </div>
+  <div class="arg-node">
+    <div class="nl">⑥ 结论</div>
+    <div class="nc">三章形成完整的"诊断→框架→工具"论证链：政策提供条件，管理框架提供标准，解说实现人的转化</div>
+  </div>
+</div>
+
+<div class="arg-meta">
+  <div class="ami am-core">
+    <div class="aml">🎯 三章核心主张（一句话）</div>
+    <div class="amt">生态旅游的可持续实现需要政策框架（第3章）、保护区管理技术（第4章）与解说教育（第5章）三者的系统整合——三层缺一，理想的生态旅游将沦为"慢速大众旅游"或"绿色洗涤"。</div>
+  </div>
+  <div class="ami am-str">
+    <div class="aml">✅ 论证最强处</div>
+    <div class="amt"><strong>第4章管理框架的演进逻辑</strong>最为严密：从承载容量的实践失败（"how many is too many?"无解）→ROS转向设置管理→LAC转向质量导向→VIM/VAMP转向访客行为管理，每一步都是对前一框架缺陷的有据修正，体现了科学管理思想的迭代进步。</div>
+  </div>
+  <div class="ami am-wk">
+    <div class="aml">⚠️ 论证最弱处</div>
+    <div class="amt"><strong>第5章解说效果的实证基础薄弱</strong>：作者虽承认"几乎没有证据表明现场解说改变了游客态度"（Beaumont等研究），却将原因归咎于"解说质量不够高"而非解说机制本身的局限，这一解释过于循环（circular argument），缺乏足够的实证支撑。</div>
+  </div>
+</div>
+</div>
+
+</div><!-- end main -->
+</body>
+</html>
